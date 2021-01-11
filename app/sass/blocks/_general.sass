@@ -1,0 +1,74 @@
+// main page elements
+body
+	font-size: 14px
+	color: black
+	font-family: 'Gilroy', sans-serif
+	font-weight: 400
+	background: white
+	overflow-x: hidden
+	// +scrollbar(10px, auto, $yellow, $gray2, $dark, null)
+
+.page-container
+	max-width: 1920px
+	width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+.container
+	max-width: 1170px
+	width: 100%
+	padding: 0
+	margin: 0 auto
+	+mq($max-width: 1200px)
+		padding: 0 15px
+	+mq($max-width: 575px)
+		padding: 0 10px
+
+.no-page
+	margin: 150px 0
+	.action
+		max-width: 350px
+
+.block-title
+	font-family: 'Mandy', serif
+	font-size: 35px
+	color: $pink
+	margin: 0 0 36px 0
+
+.arrow
+	position: absolute
+	top: 50%
+	z-index: 3
+	cursor: pointer
+	background: transparent
+	&:hover
+		svg
+			path
+				fill: $green
+	svg
+		display: block
+		width: 50px
+		height: auto
+		path
+			+trs
+			fill: $pink
+	&_prev
+		transform: translate(-100%, -50%)
+		left: 0
+	&_next
+		transform: translate(100%, -50%)
+		right: 0
+
+.pink-btn
+	text-align: center
+	min-width: 213px
+	padding: 21px 52px
+	background: $pink
+	color: white
+	font-weight: 700
+	font-size: 18px
+	line-height: 1
+	cursor: pointer
+	+trs
+	&:hover
+		background: $green

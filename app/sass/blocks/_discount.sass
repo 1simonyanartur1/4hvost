@@ -1,0 +1,32 @@
+.discount
+	padding: 32px
+	.container
+		max-width: 1720px
+		margin: 0 0 0 auto
+		+flex(row, between, center, wrap)
+	&-left
+		max-width: 490px
+		width: 100%
+	&-right
+		padding: 60px
+		max-width: 1190px
+		width: 100%
+		color: white
+		position: relative
+		+bg(null, $gray_light, 'discount/img.jpg', no-repeat, center, center, cover)
+	&__subtitle
+		font-weight: 700
+		font-size: 35px
+		line-height: 1
+	&__title
+		font-weight: 800
+		font-size: 51px
+		margin: 20px 0 32px 0
+		line-height: 1
+	&__text
+		font-weight: 500
+		font-size: 18px
+		line-height: 2
+	.action
+		margin: 53px 0 0 0
+

@@ -1,0 +1,112 @@
+.footer
+	+flex(row, null, null, wrap)
+	letter-spacing: 0.03em
+	&-left
+		+flex(column, between, start, nowrap)
+		background: white
+		width: 72%
+		padding: 60px 90px 50px 175px
+		min-height: 500px
+	&-right
+		+flex(column, between, start, nowrap)
+		min-height: 500px
+		background: $green
+		width: 28%
+		padding: 60px 76px 50px
+		color: white
+	.row
+		width: 100%
+		+flex(row, between, start, wrap)
+	.block
+		max-width: 226px
+		width: 100%
+		&__title
+			font-size: 18px
+			font-weight: 700
+			margin: 0 0 35px 0
+			letter-spacing: 0.235em
+	.menu
+		width: 100%
+		&.full
+			li
+				width: 100%
+		&.half
+			+flex(row, null, null, wrap)
+			li
+				width: 50%
+		li
+			margin: 0 0 20px 0
+		a
+			color: black
+			font-size: 16px
+			&:hover
+				font-weight: 700
+				text-decoration: underline
+	.social-list
+		width: 100%
+		li
+			margin: 0 0 20px 0
+		a
+			color: black
+			font-size: 16px
+			&:hover
+				color: $green
+				svg
+					path
+						fill: $green
+		svg
+			display: inline-block
+			margin: 0 22px 0 0
+			path
+				+trs
+				fill: black
+	.payment-list
+		width: 100%
+		li
+			font-size: 16px
+		.icon-wrap
+			display: inline-block
+			width: 64px
+			margin: 0 20px 0 0
+		img 
+			display: inline-block
+			vertical-align: middle
+	.tels
+		li
+			margin: 0 0 8px 0
+		a
+			font-size: 18px
+			font-weight: 500
+			color: white
+			&:hover
+				color: black
+	.links
+		li
+			margin: 0 0 8px 0
+		a
+			font-size: 18px
+			font-weight: 500
+			color: white
+			text-decoration: underline
+			&:hover
+				color: black
+	.mails
+		margin: 40px 0 0 0
+		li
+			margin: 0 0 8px 0
+		a
+			font-size: 18px
+			font-weight: 500
+			color: white
+			&:hover
+				color: black
+	.copyright
+		color: $gray_dark
+		margin: 85px 0 0 0
+	.privacy-link
+		text-decoration: underline
+		font-size: 16px
+		margin: 85px 0 0 0
+		color: white
+		&:hover
+			color: black
