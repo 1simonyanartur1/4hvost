@@ -1,2 +1,114 @@
 .mainblock
-	
+	.container
+		max-width: 1270px
+		+flex(row, null, null, wrap)
+	.slider
+		position: relative
+	.slide
+		overflow: hidden
+		&-left
+			position: relative
+			padding: 90px 70px 145px 0
+			max-width: 470px
+			width: 100%
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				width: 100vw
+				z-index: -1
+				background: $gray_light
+		&-right
+			position: relative
+			width: calc( 100% - 470px )
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				background: $slide-gradient
+				left: 0
+				top: 0
+				bottom: 0
+				width: 100vw
+		&__title
+			font-size: 45px
+			font-weight: 700
+			line-height: 1
+			margin: 0 0 10px 0
+		&__text
+			font-weight: 500
+			font-size: 18px
+		&__subtitle
+			margin: 25px 0 14px 0
+			color: $red
+			font-weight: 700
+			font-size: 29px
+		.pink-btn
+			margin: 30px 0 0 0
+	.slide1
+		.circle
+			+flex(row, center, center, nowrap)
+			background: linear-gradient(222.2deg, #F13535 12.1%, #B61B1B 85.23%)
+			box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25)
+			width: 118px
+			height: 118px
+			border-radius: 100%
+			z-index: 2
+			position: absolute
+			left: 0
+			top: 0
+			transform: translate(50%, 20%) rotate(-18deg)
+			&__text
+				width: 100%
+				text-align: center
+				color: white
+				font-size: 18px
+				font-weight: 700
+				span
+					display: block
+					font-size: 28px
+		.tape1
+			position: absolute
+			right: 0
+			top: 0
+			transform: translate(45%, 0)
+			z-index: 2
+		.tape2
+			position: absolute
+			left: 0
+			bottom: 0
+			z-index: 2
+		.cat
+			position: absolute
+			right: 0
+			bottom: 0
+			z-index: 3
+			transform: translate(10%, -5%)
+		.logo
+			position: absolute
+			left: 30%
+			top: 5%
+			transform: translate(0, 10%)
+		.food
+			position: absolute
+			left: 0
+			bottom: 0
+			transform: translate(10%, -10%)
+	.arrow
+		z-index: 4
+		svg
+			path
+				fill: $green
+		&:hover
+			svg
+				path
+					fill: $pink
+		&_prev
+			left: 0
+			transform: translate(50%, -50%)
+		&_next
+			right: 0
+			transform: translate(-50%, -50%)

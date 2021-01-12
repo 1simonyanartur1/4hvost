@@ -1,2 +1,118 @@
 .header
-	
+	&-bottom
+		padding: 15px 0
+		.container
+			+flex(row, between, center, wrap)
+	.links
+		+flex(row, null, center, wrap)
+		margin: 0 0 0 auto
+	.tel
+		margin: 0 65px 0 50px
+		color: $dark
+		font-size: 22px
+		font-weight: 700
+		position: relative
+		&:hover
+			color: $green
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			left: -50px
+			top: 50%
+			transform: translate(0, -50%)
+			width: 38px
+			height: 38px
+			+bg(null, $green, 'icons/tel.svg', no-repeat, center, center, auto)
+			border-radius: 100%
+		span
+			color: $green
+	.callback
+		color: $gray
+		font-weight: 600
+		margin: 0 14px
+		&:hover
+			color: $red
+	.choose-link
+		margin: 0
+		background: none
+		cursor: pointer
+		svg
+			width: 25px
+			path
+				+trs
+				fill: transparent
+				stroke: $dark
+				stroke-width: 55
+		&:hover
+			svg
+				path
+					stroke: $red
+					fill: $red
+	.user-link
+		+flex(row, null, center, wrap)
+		margin: 0
+		color: $dark
+		letter-spacing: 0.03em
+		font-weight: 700
+		font-size: 16px
+		margin: 0 27px
+		&:hover
+			color: $green
+			svg
+				circle,
+				path
+					stroke: $red
+		svg
+			circle,
+			path
+				+trs
+				stroke: $dark
+		span
+			margin: 0 0 0 8px
+	.basket-link
+		+flex(row, null, center, nowrap)
+		&:hover
+			svg
+				path
+					stroke: $red
+				circle
+					fill: $red
+		&-icon
+			position: relative
+			margin: 0 15px 0 0
+		svg
+			display: block
+			height: 33px
+			path
+				+trs
+				stroke: $dark
+			circle
+				+trs
+				fill: $dark
+		.count
+			min-width: 17px
+			height: 17px
+			+flex(row, center, center, nowrap)
+			position: absolute
+			right: 0
+			bottom: 0
+			z-index: 2
+			border-radius: 100%
+			background: white
+			box-shadow: 0 0 0 2px white
+			color: $green
+			font-weight: 700
+			font-size: 13px
+			line-height: 1
+			padding: 0 3px
+			border: 2px solid $green
+		span
+			font-size: 14px
+			font-weight: 500
+			color: $gray
+			&::after
+				content: '₽'
+				color: $gray
+				margin: 0 0 0 5px
+

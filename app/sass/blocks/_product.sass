@@ -1,0 +1,134 @@
+.product
+	max-width: 294px
+	width: 100%
+	letter-spacing: 0.03em
+	position: relative
+	&.new
+	&.discount
+		.product-price
+			&__curr
+				color: $red
+				&::after
+					color: $red
+			&__old
+				display: inline-block
+	.new,
+	.discount
+		margin: 0 10px
+		width: 48px
+		height: 48px
+		border-radius: 100%
+		text-align: center
+		+flex(row, center, center, wrap)
+		color: white
+		font-weight: 700
+		font-size: 15px
+		background: $red
+		line-height: 1
+	.new
+		margin: 0
+	.choose
+		margin: 0 0 0 auto
+		background: none
+		cursor: pointer
+		svg
+			width: 20px
+			path
+				+trs
+				fill: transparent
+				stroke: $red
+				stroke-width: 55
+		&.active,
+		&:hover
+			svg
+				path
+					fill: $red
+	&-labels
+		padding: 10px
+		+flex(row, between, start, wrap)
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		width: 100%
+	&-img
+		+flex(row, center, center, nowrap)
+		background: white
+		border: 1px solid $gray_light2
+		height: 408px
+	&__img
+		display: block
+		max-width: 280px
+		max-height: 390px
+	&__articul
+		margin: 14px 0
+		text-align: right
+		font-weight: 500
+		font-size: 14px
+		color: $gray
+	&__title
+		letter-spacing: 0.1em
+		text-align: center
+		line-height: 1.5
+		font-weight: 700
+		font-size: 18px
+	&-price
+		margin: 22px 0
+		text-align: center
+		font-size: 18px
+		font-weight: 600
+		&__curr
+			display: inline-block
+			&::after
+				content: '₽'
+				display: inline-block
+				font-size: 18px
+				margin: 0 0 0 5px
+		&__old
+			display: none
+			color: $gray
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 100%
+				height: 2px
+				background: $gray
+				position: absolute
+				transform: translate(-50%, -50%) rotate(-15deg)
+				left: 50%
+				top: 50%
+			&::after
+				content: '₽'
+				display: inline-block
+				font-size: 18px
+				margin: 0 0 0 5px
+	&-line
+		+flex(row, between, center, wrap)
+	&__btn
+		+trs
+		cursor: pointer
+		width: 50%
+		background: $green
+		padding: 9px
+		font-size: 14px
+		color: white
+		+flex(row, center, center, wrap)
+		&:hover
+			background: $red
+		span
+			margin: 0 0 0 14px
+		svg
+			path
+				fill: white
+	&__link
+		font-weight: 600
+		text-align: right
+		font-size: 14px
+		width: 50%
+		color: $green
+		&:hover
+			color: $red
+
+
+
