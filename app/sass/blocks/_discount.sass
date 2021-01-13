@@ -1,32 +1,53 @@
 .discount-block
 	padding: 32px
+	+mq($max-width: 1200px)
+		padding: 32px 0
 	.container
 		max-width: 1720px
 		margin: 0 0 0 auto
 		+flex(row, between, center, wrap)
+		+mq($max-width: 1800px)
+			max-width: 100%
 	&-left
-		max-width: 490px
-		width: 100%
+		width: 29%
+		padding: 0 10px 0 0
+		+mq($max-width: 1200px)
+			width: 100%
+			padding: 0
 	&-right
 		padding: 60px
-		max-width: 1190px
-		width: 100%
+		width: 71%
 		color: white
 		position: relative
-		+bg(null, $gray_light, 'discount/img.jpg', no-repeat, center, center, cover)
+		+bg(null, $gray_light, 'discount/img.jpg', no-repeat, left, center, cover)
+		+mq($max-width: 1200px)
+			width: 100%
+			padding: 30px
+			margin: 15px 0 0 0
+			padding: 15px
 	&__subtitle
 		font-weight: 700
 		font-size: 35px
 		line-height: 1
+		+mq($max-width: 1200px)
+			font-size: 28px
 	&__title
 		font-weight: 800
 		font-size: 51px
 		margin: 20px 0 32px 0
 		line-height: 1
+		+mq($max-width: 1200px)
+			font-size: 40px
+			margin: 10px 0
 	&__text
 		font-weight: 500
 		font-size: 18px
 		line-height: 2
+		+mq($max-width: 1200px)
+			font-size: 14px
+			line-height: 1.4
 	.action
 		margin: 53px 0 0 0
+		+mq($max-width: 1200px)
+			margin: 25px 0 0 0
 

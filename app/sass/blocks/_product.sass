@@ -4,7 +4,11 @@
 	letter-spacing: 0.03em
 	position: relative
 	&.new
+		.new
+			display: flex
 	&.discount
+		.discount
+			display: flex
 		.product-price
 			&__curr
 				color: $red
@@ -25,6 +29,7 @@
 		font-size: 15px
 		background: $red
 		line-height: 1
+		display: none
 	.new
 		margin: 0
 	.choose
@@ -56,27 +61,42 @@
 		background: white
 		border: 1px solid $gray_light2
 		height: 408px
+		width: 100%
+		+mq($max-width: 700px)
+			height: 300px
 	&__img
 		display: block
-		max-width: 280px
-		max-height: 390px
+		width: 90%
+		height: auto
+		max-height: 90%
+		object-fit: contain
 	&__articul
 		margin: 14px 0
 		text-align: right
 		font-weight: 500
 		font-size: 14px
 		color: $gray
+		+mq($max-width: 575px)
+			font-size: 12px
 	&__title
 		letter-spacing: 0.1em
 		text-align: center
 		line-height: 1.5
 		font-weight: 700
 		font-size: 18px
+		+mq($max-width: 1500px)
+			font-size: 16px
+		+mq($max-width: 575px)
+			font-size: 14px
+			line-height: 1
 	&-price
 		margin: 22px 0
 		text-align: center
 		font-size: 18px
 		font-weight: 600
+		+mq($max-width: 575px)
+			font-size: 16px
+			margin: 10px 0
 		&__curr
 			display: inline-block
 			&::after
@@ -84,6 +104,8 @@
 				display: inline-block
 				font-size: 18px
 				margin: 0 0 0 5px
+				+mq($max-width: 575px)
+					font-size: 14px
 		&__old
 			display: none
 			color: $gray
@@ -103,6 +125,8 @@
 				display: inline-block
 				font-size: 18px
 				margin: 0 0 0 5px
+				+mq($max-width: 575px)
+					font-size: 14px
 	&-line
 		+flex(row, between, center, wrap)
 	&__btn
@@ -127,6 +151,8 @@
 		font-size: 14px
 		width: 50%
 		color: $green
+		+mq($max-width: 700px)
+			padding: 0 5px
 		&:hover
 			color: $red
 

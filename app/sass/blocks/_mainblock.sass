@@ -2,15 +2,27 @@
 	.container
 		max-width: 1270px
 		+flex(row, null, null, wrap)
+		+mq($max-width: 1500px)
+			max-width: 1100px
 	.slider
 		position: relative
 	.slide
 		overflow: hidden
 		&-left
 			position: relative
-			padding: 90px 70px 145px 0
+			z-index: 2
+			padding: 0 70px 0 0
 			max-width: 470px
 			width: 100%
+			min-height: 517px
+			+flex(column, center, start, null)
+			+mq($max-width: 1500px)
+				min-height: 400px
+			+mq($max-width: 700px)
+				max-width: 80%
+				padding: 0 25px 0 0
+			+mq($max-width: 575px)
+				max-width: 70%
 			&::before
 				content: ''
 				display: block
@@ -24,6 +36,8 @@
 		&-right
 			position: relative
 			width: calc( 100% - 470px )
+			+mq($max-width: 700px)
+				width: 20%
 			&:before
 				content: ''
 				display: block
@@ -38,14 +52,21 @@
 			font-weight: 700
 			line-height: 1
 			margin: 0 0 10px 0
+			+mq($max-width: 1200px)
+				font-size: 30px
 		&__text
 			font-weight: 500
 			font-size: 18px
+			+mq($max-width: 1200px)
+				font-size: 14px
 		&__subtitle
 			margin: 25px 0 14px 0
 			color: $red
 			font-weight: 700
 			font-size: 29px
+			+mq($max-width: 1200px)
+				font-size: 20px
+				margin: 10px 0
 		.pink-btn
 			margin: 30px 0 0 0
 	.slide1
@@ -61,44 +82,84 @@
 			left: 0
 			top: 0
 			transform: translate(50%, 20%) rotate(-18deg)
+			+mq($max-width: 1500px)
+				transform: translate(20%, 20%) rotate(-18deg)
+			+mq($max-width: 700px)
+				z-index: 4
+				right: 15px
+				transform: translate(0, 20%) rotate(-18deg)
+			+mq($max-width: 575px)
+				width: 80px
+				height: 80px
+				right: 10px
 			&__text
 				width: 100%
 				text-align: center
 				color: white
 				font-size: 18px
 				font-weight: 700
+				+mq($max-width: 575px)
+					font-size: 14px
 				span
 					display: block
 					font-size: 28px
+					+mq($max-width: 575px)
+						font-size: 16px
 		.tape1
 			position: absolute
 			right: 0
 			top: 0
 			transform: translate(45%, 0)
 			z-index: 2
+			+mq($max-width: 1200px)
+				display: none
 		.tape2
 			position: absolute
 			left: 0
 			bottom: 0
 			z-index: 2
+			+mq($max-width: 1200px)
+				display: none
 		.cat
 			position: absolute
 			right: 0
 			bottom: 0
 			z-index: 3
 			transform: translate(10%, -5%)
+			+mq($max-width: 1500px)
+				height: 80%
+			+mq($max-width: 1200px)
+				transform: translate(10%, 0)
+			+mq($max-width: 700px)
+				height: 60%
+			+mq($max-width: 575px)
+				transform: translate(40%, 0)
 		.logo
 			position: absolute
 			left: 30%
 			top: 5%
 			transform: translate(0, 10%)
+			+mq($max-width: 1500px)
+				width: 25%
+			+mq($max-width: 1200px)
+				left: auto
+				right: 2%
+			+mq($max-width: 700px)
+				display: none
 		.food
 			position: absolute
 			left: 0
 			bottom: 0
 			transform: translate(10%, -10%)
+			+mq($max-width: 1500px)
+				width: 50%
+			+mq($max-width: 700px)
+				display: none
 	.arrow
 		z-index: 4
+		+mq($max-width: 1200px)
+			top: auto
+			bottom: 0
 		svg
 			path
 				fill: $green
@@ -109,6 +170,24 @@
 		&_prev
 			left: 0
 			transform: translate(50%, -50%)
+			+mq($max-width: 1500px)
+				transform: translate(20%, -50%)
+			+mq($max-width: 1200px)
+				left: 45%
+			+mq($max-width: 1000px)
+				left: 42%
+			+mq($max-width: 575px)
+				left: 0
 		&_next
 			right: 0
 			transform: translate(-50%, -50%)
+			+mq($max-width: 1500px)
+				transform: translate(-20%, -50%)
+			+mq($max-width: 1200px)
+				right: 45%
+			+mq($max-width: 1000px)
+				right: 42%
+			+mq($max-width: 575px)
+				right: auto
+				left: 50px
+

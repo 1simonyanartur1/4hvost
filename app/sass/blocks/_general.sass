@@ -21,6 +21,7 @@ body
 	margin: 0 auto
 	+mq($max-width: 1200px)
 		padding: 0 15px
+		max-width: 100%
 	+mq($max-width: 575px)
 		padding: 0 10px
 
@@ -34,6 +35,10 @@ body
 	font-size: 35px
 	color: $pink
 	margin: 0 0 36px 0
+	+mq($max-width: 1200px)
+		margin: 0 0 20px 0
+	+mq($max-width: 575px)
+		font-size: 24px
 
 .arrow
 	position: absolute
@@ -41,6 +46,10 @@ body
 	z-index: 3
 	cursor: pointer
 	background: transparent
+	+mq($max-width: 1200px)
+		top: -45px
+	+mq($max-width: 700px)
+		top: -35px
 	&:hover
 		svg
 			path
@@ -49,15 +58,23 @@ body
 		display: block
 		width: 50px
 		height: auto
+		+mq($max-width: 1200px)
+			width: 30px
 		path
 			+trs
 			fill: $pink
 	&_prev
 		transform: translate(-120%, -50%)
 		left: 0
+		+mq($max-width: 1200px)
+			right: 15px
+			left: auto
 	&_next
 		transform: translate(120%, -50%)
 		right: 0
+		+mq($max-width: 1200px)
+			right: 0
+			transform: translate(0, -50%)
 
 .pink-btn
 	text-align: center
@@ -70,5 +87,9 @@ body
 	line-height: 1
 	cursor: pointer
 	+trs
+	+mq($max-width: 1200px)
+		padding: 10px 20px
+	+mq($max-width: 575px)
+		min-width: 150px
 	&:hover
 		background: $green

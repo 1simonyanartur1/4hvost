@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Mandy';
+    src: url('MandysSketch.eot');
+    src: url('MandysSketch.eot?#iefix') format('embedded-opentype'),
+        url('MandysSketch.woff2') format('woff2'),
+        url('MandysSketch.woff') format('woff'),
+        url('MandysSketch.ttf') format('truetype'),
+        url('MandysSketch.svg#Mandy\'sSketch') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
