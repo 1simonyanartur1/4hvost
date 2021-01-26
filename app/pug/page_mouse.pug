@@ -1,5 +1,6 @@
 - var img = '../img/';
 include blocks/banner.pug
+include blocks/discount.pug
 
 
 doctype
@@ -200,23 +201,7 @@ html
 
 			
 			
-			section.discount-block
-				.container
-					.discount-block-left
-						.text-container
-							p Parturient magna ridiculus? Mid Dignisim augue amet sed urna phasellus mana, elit, adipiscing quis! Augue amet Placerat? Tincidunt. Ut nec quis turpis. In dictumst, dapibus rhoncus pulvinar. Magna aliquam nisi mauris magna placerat dis, sed sit aenean turpis.
-							p Ut nec quis turpis. In dictumst, dapibus rhoncus pulvinar. Magna aliquam nisi mauris magna placerat dis, sed sit aenean turpis. Ut nec quis turpis. In dictumst, dapibus rhoncus pulvinar. Magna aliquam nisi mauris magna placerat dis, sed sit aenean turpis. Ut nec quis turpis. In dictumst, dapibus rhoncus pulvinar. Magna aliquam nisi mauris magna placerat dis, sed sit aenean turpis. Ut nec quis turpis. In dictumst, dapibus rhoncus pulvinar. Magna aliquam nisi mauris magna placerat dis, sed sit aenean turpis.
-							ul
-								li Cotton blend
-								li Straight fit
-								li Dry clean
-					.discount-block-right
-						.discount-block__subtitle ГрумМир!
-						.discount-block__title СКИДКА 10%
-						.discount-block__text При покупке корма пурина план для собак <br> скидка на груминг 10%
-						ul.action
-							li
-								a.pink-btn.popup-link(href="#") Записаться
+			+discount()
 
 			section.partners
 				.container

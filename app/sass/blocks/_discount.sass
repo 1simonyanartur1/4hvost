@@ -19,7 +19,11 @@
 		width: 71%
 		color: white
 		position: relative
-		+bg(null, $gray_light, 'discount/img.jpg', no-repeat, left, center, cover)
+		// +bg(null, $gray_light, 'discount/img.jpg', no-repeat, left, center, cover)
+		background-repeat: no-repeat
+		bagkground-position: left center
+		background-size: cover
+		background-color: $gray_light
 		+mq($max-width: 1200px)
 			width: 100%
 			padding: 30px
@@ -51,3 +55,10 @@
 		+mq($max-width: 1200px)
 			margin: 25px 0 0 0
 
+	&_white
+		.discount-block__title
+			color: #3D3D3D;
+		.discount-block__subtitle
+			color: #3D3D3D;
+		.discount-block__text
+			color: #3D3D3D;

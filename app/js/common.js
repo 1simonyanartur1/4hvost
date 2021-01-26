@@ -1,4 +1,10 @@
 (function ($) {
+
+	
+	$(function () {
+		$('.lazy').Lazy();
+	  });
+
 	$(document).ready(function () {
 
 		var $scrollPos = 0;
