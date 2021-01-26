@@ -93,3 +93,28 @@ body
 		min-width: 150px
 	&:hover
 		background: $green
+
+.button
+	+trs
+	cursor: pointer
+	width: 50%
+	background: $green
+	padding: 9px
+	font-weight: 700
+	font-size: 18px
+	line-height: 1
+	color: white
+	height: 52px
+	+flex(row, center, center, wrap)
+	max-width: 213px
+
+	&_green
+		&:hover
+			background: $red
+		
+	&_red
+		background: $pink
+		&:hover
+			background: $green
+		
+

@@ -1,0 +1,131 @@
+.banner
+    width: 100%
+    max-width: 1560px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: 1fr 556px
+    grid-gap: 23px
+    height: 320px
+
+    +mq($max-width: 1200px)
+        grid-template-columns: 1fr 1fr
+    +mq($max-width: 1024px)
+        grid-template-columns: 1fr
+        height: unset
+        grid-gap: 0
+
+    &__left
+        padding: 38px 70px
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        
+        +mq($max-width: 1024px)
+            display: none
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+            +mq($max-width: 1024px)
+                display: none
+
+        .pink-btn
+
+        
+        &_content
+            +mq($max-width: 1024px)
+                display: flex
+                padding: 20px
+                width: 100%
+
+
+    &__heading
+        font-weight: 800;
+        font-size: 51px;
+        // line-height: 62px;
+
+        color: #3D3D3D;
+        text-transform: uppercase
+        margin-bottom: 15px
+
+        +mq($max-width: 1200px)
+            font-size: 30px
+        +mq($max-width: 1024px)
+            font-size: 22px
+            
+    &__text
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 31px;
+
+        color: #3D3D3D;
+        max-width: 440px
+        flex: 1
+
+
+    &__right
+        width: 556px
+        padding: 38px 70px
+        background-color: #C9ECDA
+        background-image: url(../img/first/foot_dog.png)
+        background-repeat: no-repeat
+        background-position: 100% center
+
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+
+
+        +mq($max-width: 1024px)
+            padding: 20px
+            width: 100%
+
+
+    &__title
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        // line-height: 58px;
+        /* identical to box height */
+
+        text-align: left;
+        letter-spacing: 0.03em;
+        margin-bottom: 7px
+
+        color: #3D3D3D;
+
+        +mq($max-width: 1200px)
+            font-size: 30px
+        +mq($max-width: 1024px)
+            font-size: 22px
+    &__subtitle
+        font-style: normal;
+        font-weight: 800;
+        font-size: 39px;
+        
+
+        color: #3D3D3D;
+        margin-bottom: 4px 
+        +mq($max-width: 1200px)
+            font-size: 25px
+        +mq($max-width: 1024px)
+            font-size: 18px
+
+    &__content
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        margin-bottom: 28px
+        flex: 1
