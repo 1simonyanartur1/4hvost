@@ -1,63 +1,67 @@
-mixin catalog()        
+mixin catalog(folder, type)
+       
     section.section.section_catalog
             .container.catalog-preview__wrapper
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/1_" + folder + ".jpg", alt="")
 
 
-                    .catalog-preview__title Корма
+                    .catalog-preview__title Животные
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/2_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Наполнители
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/3_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Домики
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/4_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Подстилки
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/5_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Клетки и вольеры
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/6_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Амуниция
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/7_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Игрушки
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/8_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Аксессуары
                 .catalog-preview
                     .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                        img(src=img+"catalog/" + folder + "/9_" + folder + ".jpg", alt="")
 
 
                     .catalog-preview__title Здоровье
-                .catalog-preview
-                    .catalog-preview__image
-                        img(src=img+"products/img1.jpg", alt="")
+                
+
+                if type
+                    .catalog-preview
+                        .catalog-preview__image
+                            img(src=img+"catalog/" + folder + "/10_" + folder + ".jpg", alt="")
 
 
-                    .catalog-preview__title Уход
+                        .catalog-preview__title Уход
