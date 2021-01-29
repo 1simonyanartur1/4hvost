@@ -138,30 +138,32 @@
 		&:hover
 			color: $red
 	.choose-link
-		margin: 0
+		margin: 0 10px 0 0
 		background: none
 		cursor: pointer
+		position: relative
 		+mq($max-width: 575px)
 			margin: 0 10px 0 0
 		svg
 			width: 25px
+			height: 25px
 			path
 				+trs
-				fill: transparent
-				stroke: $dark
-				stroke-width: 55
+				// fill: transparent
+				// stroke: $dark
+				// stroke-width: 55
 		&:hover
 			svg
 				path
-					stroke: $red
+					// stroke: $red
 					fill: $red
 	.user-link
 		+flex(row, null, center, wrap)
 		margin: 0
 		color: $dark
 		letter-spacing: 0.03em
-		font-weight: 700
-		font-size: 16px
+		font-weight: normal
+		font-size: 14px
 		margin: 0 27px
 		+mq($max-width: 1200px)
 			margin: 0 15px
@@ -185,49 +187,56 @@
 		&:hover
 			svg
 				path
-					stroke: $red
-				circle
 					fill: $red
+					+trs
+				// circle
+				// 	fill: $red
 		&-icon
 			position: relative
 			margin: 0 15px 0 0
 		svg
 			display: block
 			height: 33px
+			// path
 			path
 				+trs
-				stroke: $dark
-			circle
-				+trs
-				fill: $dark
-		.count
-			min-width: 17px
-			height: 17px
-			+flex(row, center, center, nowrap)
-			position: absolute
-			right: 0
-			bottom: 0
-			z-index: 2
-			border-radius: 100%
-			background: white
-			box-shadow: 0 0 0 2px white
-			color: $green
-			font-weight: 700
-			font-size: 13px
-			line-height: 1
-			padding: 0 3px
-			border: 2px solid $green
+			// 	stroke: $dark
+			// circle
+			// 	+trs
+			// 	fill: $dark
+		// .count
+		// 	min-width: 17px
+		// 	height: 17px
+		// 	+flex(row, center, center, nowrap)
+		// 	position: absolute
+		// 	right: 0
+		// 	bottom: 0
+		// 	z-index: 2
+		// 	border-radius: 8.5px
+		// 	background: white
+		// 	box-shadow: 0 0 0 2px white
+		// 	color: $green
+		// 	font-weight: 900
+		// 	font-size: 10px
+		// 	line-height: 1
+		// 	padding: 0 3px
+		// 	border: 2.5px solid $green
+		// 	letter-spacing: 0.03em
+
+		// 	box-shadow: 0px 0px 0px 2px #FFFFFF
 		span
-			font-size: 14px
 			font-weight: 500
-			color: $gray
+			font-size: 18px
+			line-height: 22px
+
+			color: $green
 			display: inline-block
 			width: 100%
 			max-width: 50px
 			&::after
 				content: '₽'
-				color: $gray
-				margin: 0 0 0 5px
+				color: $green
+				margin: 0 0 0 0px
 
 	#main-menu-state:not(:checked) ~ #main-menu
 		+mq($max-width: 1200px)
@@ -378,7 +387,7 @@
 						width: 100%
 						color: white
 						padding: 10px 45px 10px 15px
-					&.has-submenu 
+					&.has-submenu
 						+mq($max-width: 1200px)
 							color: white !important
 							background: inherit !important
@@ -387,7 +396,7 @@
 							+mq($max-width: 1200px)
 								right: 10px
 								border-color: white
-					&.highlighted 
+					&.highlighted
 						+mq($max-width: 1200px)
 							color: white !important
 						.sub-arrow

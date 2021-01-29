@@ -1,5 +1,10 @@
 .catalog-preview
 	z-index: 1
+
+	&:hover
+		.catalog-preview__title
+			color: $pink
+
 	&__image
 		border: 1px solid #D6D6D6
 		margin-bottom: 30px
@@ -22,6 +27,7 @@
 		text-align: center
 		letter-spacing: 0.1em
 		text-transform: uppercase
+		color: $dark
 		+mq($max-width: 575px)
 			font-size: 14px
 

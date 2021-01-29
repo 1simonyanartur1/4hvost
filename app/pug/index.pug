@@ -1,12 +1,13 @@
 - var img = '../img/';
-include main.pug
+include main
 
 doctype
 html
 	include blocks/head.pug
 		title
 	body
-		include blocks/header.pug
+		+header1()
+		//- include blocks/header.pug
 
 		main.page-container
 

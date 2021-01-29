@@ -42,21 +42,29 @@
 	.new
 		margin: 0
 	.choose
-		margin: 0 0 0 auto
+		margin-left: 5px
 		background: none
 		cursor: pointer
 		svg
 			width: 20px
-			path
-				+trs
-				fill: transparent
-				stroke: $red
-				stroke-width: 55
+
 		&.active,
 		&:hover
 			svg
 				path
 					fill: $red
+
+		&_love
+			svg
+				path
+					+trs
+					fill: transparent
+					stroke: $red
+					stroke-width: 55
+
+		&__box
+			margin: 0 0 0 auto
+
 	&-labels
 		padding: 10px
 		+flex(row, between, start, wrap)
@@ -84,7 +92,7 @@
 		text-align: right
 		font-weight: 500
 		font-size: 14px
-		letter-spacing: 0.03em;
+		letter-spacing: 0.03em
 		color: $gray
 		+mq($max-width: 575px)
 			font-size: 12px
