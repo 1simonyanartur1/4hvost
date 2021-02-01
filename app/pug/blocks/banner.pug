@@ -4,7 +4,7 @@ mixin banner(dog,cat,mouse)
 			.banner__left
 				img(src=img+"first/slide_dog.png", alt="")
 			.banner
-				.banner__right
+				.banner__right.lazy(data-src=img+"first/foot_dog.png")
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
@@ -14,7 +14,7 @@ mixin banner(dog,cat,mouse)
 			.banner__left
 				img(src=img+"first/slide_cat.png", alt="")
 			.banner
-				.banner__right
+				.banner__right.lazy(data-src=img+"first/foot_cat.png")
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
@@ -27,7 +27,7 @@ mixin banner(dog,cat,mouse)
 				.banner__text При покупке корма пурина план для собак скидка на груминг 10%
 				a(href="/").button.button_red Записаться
 			.banner
-				.banner__right
+				.banner__right.lazy(data-src=img+"first/foot_mouse.png")
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
