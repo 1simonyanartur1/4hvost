@@ -1,6 +1,6 @@
 mixin catalog(folder, type,dog,cat,mouse,bird,fish,reptile,footprint)
        
-    section.section.section_catalog
+    section.section.section_catalog.lazy(data-src=img+"catalog/grooming/bg_grooming.jpg")
             if footprint
                 +footprint(dog,cat,mouse,bird,fish,reptile)
             .container.catalog-preview__wrapper
