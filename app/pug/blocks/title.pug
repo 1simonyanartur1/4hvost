@@ -1,0 +1,23 @@
+mixin title(text,cl,h1,h2,inner)
+    if inner
+        if h1
+            .title(class= cl)
+                .title__inner
+                    h1!= text
+        else if h2
+            .title(class= cl)
+                .title__inner
+                    h2!= text
+        else if h3
+            .title(class= cl)
+                .title__inner 
+                    h3!= text
+    else
+        if h1
+            .title(class= cl)
+                h1!= text
+        else if h2
+            .title(class= cl)
+                h2!= text
+        else if h3
+            .title(class= cl)= text

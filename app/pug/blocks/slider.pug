@@ -1,7 +1,7 @@
 mixin slider(title)
         section.products-slider
             .container
-                .block-title= title
+                +title(title,'title_green','','h2')
                 .slider
                     .product.new.discount
                             .product-labels

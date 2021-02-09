@@ -1,0 +1,42 @@
+.title
+    width: 100%
+    flex: 1
+    h1
+        font-family: 'Mandy', serif
+        font-size: 35px
+        color: black
+        margin: 0 0 36px 0
+        +mq($max-width: 1200px)
+            margin: 0 0 20px 0
+        +mq($max-width: 575px)
+            font-size: 24px
+    h2
+        font-family: 'Mandy', serif
+        font-size: 35px
+        color: black
+        margin: 0 0 36px 0
+        +mq($max-width: 1200px)
+            margin: 0 0 20px 0
+        +mq($max-width: 575px)
+            font-size: 24px
+
+    &_pink
+        h1,h2
+            color: $pink
+    &_green
+        h1,h2
+            color: $green
+
+    &__inner
+        width: 100%
+        padding: 10px 0 0 0
+        margin: 0 auto
+        max-width: 1560px
+        +mq($max-width: 1650px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 1200px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 575px)
+            padding: 0 10px
