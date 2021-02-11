@@ -1,34 +1,52 @@
-mixin stars(blog,cl)
-    .stars(class= cl)
-        if blog
-            .stars__item.stars__item_active
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item.stars__item_active
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item.stars__item_active
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item.stars__item_active
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-        else
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
-            .stars__item
-                svg.stars__icon(class= cl)
-                    use(xlink:href="/assets/img/sprite_star.svg#star")
+mixin stars(one,two,three)
+    if one
+        .stars
+                .stars__item.stars__item_active
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+    else if two
+        .stars
+                .stars__item.stars__item_active
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item.stars__item_active
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+    else if three
+        .stars
+                .stars__item.stars__item_active
+                    svg.stars__icon.stars__item_active
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item.stars__item_active
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item.stars__item_active
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
+                .stars__item
+                    svg.stars__icon
+                        use(xlink:href="/img/sprite_star.svg#star")
