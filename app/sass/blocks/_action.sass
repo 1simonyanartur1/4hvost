@@ -3,13 +3,25 @@
     border: 1px solid $line
     padding: 15px
     display: flex !important
+    cursor: pointer;
     +mq($max-width: 768px)
         padding: 0
+
+    
+
+    &:hover
+        .action__title
+            text-decoration: underline
 
     &_single
         border: none
         align-items: flex-start
+        
+        cursor: default;
 
+        &:hover
+            .action__title
+                text-decoration: none;
         .action__text
             column-count: 2
             column-gap: 40px
@@ -17,7 +29,7 @@
 
             +mq($max-width: 1023px)
                 column-count: unset
-
+                
     &__image
         flex: 0 0 330px
         height: 360px

@@ -1,0 +1,75 @@
+.partner
+
+    border: 1px solid $gray2
+    padding: 40px 45px 45px
+    
+
+    +mq($max-width: 768px)
+        padding: 20px
+
+    &__name
+        font-style: normal
+        font-weight: bold
+        font-size: 24px
+
+        color: #000000
+        min-height: 60px
+        margin-bottom: 20px;
+
+        +mq($max-width: 768px)
+            min-height: unset
+            font-size: 20px;
+
+
+    &__content
+        
+    &__row
+        display: flex;
+        
+        &:not(:last-child)
+            margin-bottom: 20px;
+        
+            +mq($max-width: 768px)
+            
+                margin-bottom: 15px;
+
+    &__option
+        font-style: normal
+        font-weight: bold
+        font-size: 24px
+        margin-right: 10px;
+        +mq($max-width: 768px)
+            
+            font-size: 20px;
+        
+    &__value
+        font-style: normal
+        font-weight: normal
+        font-size: 24px
+        +mq($max-width: 768px)
+            
+            font-size: 20px;
+
+    &__wrapper
+        padding: 0 0 50px 0
+    &__box
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px 40px
+        
+
+        padding: 0
+        margin: 0 auto
+        max-width: 1560px
+        +mq($max-width: 1650px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 1200px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 1024px)
+            grid-template-columns: 1fr
+        +mq($max-width: 575px)
+            padding: 0 10px
+            grid-gap: 15px;
