@@ -12,7 +12,11 @@ html
 		main.page-container
 			+breadcrumbs('','Отзывы')
 			+title('Отзывы наших клиентов','','h1','','inner')
-			
+			.button__wrapper
+				+button('','button_review','','','','reviews')
+				+button('Предыдущая статья','button_article','','','','','','sibling')
+				+button('Следующая статья','button_article button_article_next','','','','','','sibling')
+				
 			
 			+review()
 

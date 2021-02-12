@@ -1,5 +1,5 @@
 .button
-	
+
 	cursor: pointer
 	width: 50%
 	background: $green
@@ -31,7 +31,6 @@
 	&_margin
 		margin-top: 30px
 
-
 	&_transparent
 		border: 1px solid #E0E0E0
 		cursor: pointer
@@ -52,7 +51,6 @@
 
 	&_cart
 		height: 40px
-		+trs
 		cursor: pointer
 		width: calc(50% - 2px)
 		background: $green
@@ -67,4 +65,74 @@
 				fill: white
 		&:hover
 			background: $red
-		
+
+	&_review
+		height: 86px
+		width: 300px
+		max-width: unset
+		font-size: 20px
+		+flex(row, center, center, wrap)
+		border-radius: 43px
+
+		svg
+			margin-left: 35px
+
+		&:hover
+			background-color: $pink
+			+trs
+
+		+mq($max-width: 575px)
+			height: 60px
+			font-size: 18px
+			max-width: 260px
+			width: 100%
+			svg
+				height: 30px
+				width: 30px
+				margin-left: 20px
+
+
+
+	&_article
+		height: 86px
+		width: 340px
+		border-radius: 43px
+		max-width: unset
+		flex-direction: row-reverse
+		background-color: $articles
+		color: $articles_text
+
+		svg
+			margin-right: 30px
+
+		&_next
+			flex-direction: row
+			svg
+				margin-left: 30px
+				margin-right: 0
+				transform: scaleX(-1)
+
+		&:hover
+			background-color: $green
+			color: white
+			svg
+				path
+					fill: white
+
+
+
+	&__wrapper
+		width: 100%
+		padding: 0 0 50px 0
+		margin: 0 auto
+		max-width: 1560px
+		+mq($max-width: 1650px)
+			padding: 0 15px 50px
+			max-width: 100%
+		+mq($max-width: 1200px)
+			padding: 0 15px 40px
+			max-width: 100%
+		+mq($max-width: 575px)
+			padding: 0 10px 30px
+
+	
