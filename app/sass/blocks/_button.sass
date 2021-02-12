@@ -102,8 +102,17 @@
 		background-color: $articles
 		color: $articles_text
 
+		+mq($max-width: 575px)
+			height: 60px
+			width: 100%
+			max-width: 250px
+
 		svg
 			margin-right: 30px
+			+mq($max-width: 575px)
+				height: 30px
+				width: 30px
+				margin-right: 15px
 
 		&_next
 			flex-direction: row
@@ -111,6 +120,9 @@
 				margin-left: 30px
 				margin-right: 0
 				transform: scaleX(-1)
+		
+			+mq($max-width: 575px)
+				margin-top: 10px
 
 		&:hover
 			background-color: $green
@@ -126,6 +138,8 @@
 		padding: 0 0 50px 0
 		margin: 0 auto
 		max-width: 1560px
+		display: flex
+		justify-content: space-between
 		+mq($max-width: 1650px)
 			padding: 0 15px 50px
 			max-width: 100%
@@ -134,5 +148,7 @@
 			max-width: 100%
 		+mq($max-width: 575px)
 			padding: 0 10px 30px
+			flex-direction: column
+			align-items: center
 
 	
