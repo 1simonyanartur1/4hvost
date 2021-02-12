@@ -1,0 +1,70 @@
+.button
+
+	cursor: pointer
+	width: 50%
+	background: $green
+	padding: 9px
+	font-weight: 700
+	font-size: 18px
+	line-height: 1
+	color: white
+	height: 52px
+	max-width: 213px
+	+flex(row, center, center, wrap)
+	+trs
+
+	&_green
+		&:hover
+			background: $red
+			+trs
+
+	&_red
+		padding: 21px 52px
+		background: $pink
+		+mq($max-width: 1200px)
+		padding: 10px 20px
+		+mq($max-width: 575px)
+			min-width: 150px
+		&:hover
+			background: $green
+			+trs
+	&_margin
+		margin-top: 30px
+
+		
+	&_transparent
+		border: 1px solid #E0E0E0
+		cursor: pointer
+		width: calc(50% - 2px)
+		text-align: center
+		height: 40px
+		font-size: 14px
+		color: $green
+		background-color: transparent
+		font-weight: 500
+		height: 40px
+		padding: 0
+		+mq($max-width: 700px)
+			padding: 0 5px
+		&:hover
+			color: $red
+			+trs
+
+	&_cart
+		height: 40px
+		+trs
+		cursor: pointer
+		width: calc(50% - 2px)
+		background: $green
+		padding: 0 9px
+		font-size: 14px
+		color: white
+		+flex(row-reverse, center, center, wrap)
+
+		svg
+			margin-right: 15px
+			path
+				fill: white
+		&:hover
+			background: $red
+		

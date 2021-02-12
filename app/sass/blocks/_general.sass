@@ -76,48 +76,9 @@ body
 			right: 0
 			transform: translate(0, -50%)
 
-.pink-btn
-	text-align: center
-	min-width: 213px
-	padding: 21px 52px
-	background: $pink
-	color: white
-	font-weight: 700
-	font-size: 18px
-	line-height: 1
-	cursor: pointer
-	+trs
-	+mq($max-width: 1200px)
-		padding: 10px 20px
-	+mq($max-width: 575px)
-		min-width: 150px
-	&:hover
-		background: $green
 
-.button
-	+trs
-	cursor: pointer
-	width: 50%
-	background: $green
-	padding: 9px
-	font-weight: 700
-	font-size: 18px
-	line-height: 1
-	color: white
-	height: 52px
-	+flex(row, center, center, wrap)
-	max-width: 213px
 
-	&_green
-		&:hover
-			background: $red
-		
-	&_red
-		background: $pink
-		&:hover
-			background: $green
-	&_transparent
-		border: 1px solid #E0E0E0;
+
 
 
 .slick-track

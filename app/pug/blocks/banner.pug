@@ -8,7 +8,7 @@ mixin banner(dog,cat,mouse)
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
-					a(href="/").button.button_green Подробнее
+					+button('Подробнее','button_green','','/')
 	else if cat
 		.banner
 			.banner__left
@@ -18,17 +18,17 @@ mixin banner(dog,cat,mouse)
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
-					a(href="/").button.button_green Подробнее
+					+button('Подробнее','button_green','','/')
 	else
 		.banner
 			.banner__left.banner__left_content
 				img(src=img+"first/slide_mouse.png", alt="")
 				.banner__heading Скидка 10%
 				.banner__text При покупке корма пурина план для собак скидка на груминг 10%
-				a(href="/").button.button_red Записаться
+				+button('Записаться','button_red','','/') 
 			.banner
 				.banner__right.lazy(data-src=img+"first/foot_mouse.png")
 					.banner__title SALE!
 					.banner__subtitle СКИДКА 10%
 					.banner__content Возьмите большую упаковку корма для стерилизованных любимцев
-					a(href="/").button.button_green Подробнее
+					+button('Подробнее','button_green','','/')
