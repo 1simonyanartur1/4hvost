@@ -1,0 +1,9 @@
+mixin feedback()
+    .feedback
+        .feedback__title Покупали данную продукцию?
+        .feedback__subtitle Оставьте своё мнение
+        form(action="/").feedback__form
+            input(type="text" placeholder="Как вас зовут?" name="feedback__name").feedback__input 
+            textarea(placeholder="Ваш отзыв").feedback__textarea 
+            .feedback__questions
+            +button('Отправить','','submit')
