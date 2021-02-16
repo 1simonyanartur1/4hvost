@@ -137,5 +137,34 @@
 			]
 		});
 
+
+
+
+
+		$('.stars_form .stars__item').on('click',function(){
+			var rate = $(this).attr('data-rate')
+			console.log(rate);
+			var inputStars = $('input[name="stars"]')
+			inputStars.val(rate)
+		  
+			if($('#rate').length > 0){
+			  $('#rate').val(rate)
+			}
+		  
+			$('.stars_form .stars__item').each(function(indx){
+			  if(indx >= rate){
+				  $(this).removeClass('stars__item_active')
+			  }else{
+				$(this).addClass('stars__item_active')
+			  }
+			})
+		  
+		  })
+
+
+
+
+
+
 	});
 })(jQuery);

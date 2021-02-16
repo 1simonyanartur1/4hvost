@@ -6,20 +6,18 @@
 	outline: 0
 	border: 0
 	&:before,
-	&:after 
+	&:after
 		padding: 0
 		margin: 0
 		outline: 0
 		border: 0
 
-
 button,
 html [type="button"], /* 1 */
 [type="reset"],
-[type="submit"] 
+[type="submit"]
 	-webkit-appearance: button /* 2 */
 	background: none
-
 
 input[type="text"],
 input[type="tel"],
@@ -27,12 +25,24 @@ input[type="email"],
 input[type="submit"],
 input[type="number"],
 input[type="search"]
-	-webkit-appearance: none 
+	-webkit-appearance: none
 
+textarea
+  resize: none
+  overflow: auto
+  vertical-align: top
+  box-shadow: none
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  outline: none
+  border: none
+   margin: 0
+  line-height: normal
+  -webkit-appearance: none
 
 ul,
 ol,
-nav 
+nav
 	list-style-type: none
 	li
 		list-style-type: none
