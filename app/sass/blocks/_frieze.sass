@@ -1,0 +1,68 @@
+.frieze
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 40px
+    +mq($max-width: 575px)
+        grid-template-columns: 1fr
+        grid-gap: 20px
+    &__banner
+        display: flex
+        justify-content: flex-end
+        background-color: $pink
+        background-repeat: no-repeat
+        background-position: 0 center
+        padding: 20px
+
+        +mq($max-width: 1650px)
+            padding: 20px 15px
+        +mq($max-width: 1200px)
+            padding: 20px 15px
+        +mq($max-width: 575px)
+            padding: 20px 10px
+    &__text
+        font-style: normal
+        font-weight: 600
+        font-size: 29px
+        line-height: 135.17%
+        max-width: 395px
+
+        color: #FFFFFF
+        +mq($max-width: 575px)
+            font-size: 20px
+    &__value
+        font-style: normal
+        font-weight: bold
+        font-size: 92px
+        line-height: 135.17%
+        margin-left: 70px
+
+        color: #FFFFFF
+        +mq($max-width: 575px)
+            margin-left: 30px
+            font-size: 70px
+    &__content
+        max-width: 760px
+        width: 100%
+        display: flex
+        align-items: center
+
+    &__caption
+        max-width: 760px
+        width: 100%
+        padding: 0 20px 0 0
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 163.17%
+        display: flex
+        align-items: center
+
+        color: #000000
+
+        +mq($max-width: 1650px)
+            padding: 0 15px 0 0
+        +mq($max-width: 1200px)
+            padding: 0 15px 0 0
+        +mq($max-width: 575px)
+            padding: 10px
+            font-size: 16px
