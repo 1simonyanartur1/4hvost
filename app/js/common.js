@@ -161,7 +161,45 @@
 			]
 		});
 
-
+		$('.foto__images').slick({
+			lazyload: 'ondemand',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.foto__slider',
+			
+			dots: false,
+		  });
+		  $('.foto__slider').slick({
+			lazyload: 'ondemand',
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.foto__images',
+			dots: false,
+			vertical: true,
+			focusOnSelect: true,
+			nextArrow: '<div class="foto__arrow  foto__arrow_next"></div>',
+			prevArrow: '<div class="foto__arrow  foto__arrow_prev"></div>',
+			appendArrows: $('.foto__arrows'),
+			responsive: [
+			 
+			  {
+				breakpoint: 600,
+				settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 2
+				}
+			  },
+			  {
+				breakpoint: 480,
+				settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 1
+				}
+			  }]
+		  });
+		  
 
 
 

@@ -1,0 +1,24 @@
+mixin foto()
+	.foto 
+		.foto__div
+			.foto__pictures
+				.foto__slider
+					img(src=img+"slider/goods_1.jpg", alt="")
+					img(src=img+"slider/goods_1.jpg", alt="")
+
+					.foto__video.foto__video_mini.lazy(data-src="https://img.youtube.com/vi/kdhCfhxZhrk/maxresdefault.jpg ")
+						
+							.foto__play 
+								img.lazy(data-src=img+"play_button.png")
+				.foto__images
+					a(href=img+"slider/goods_1.jpg" data-fancybox="image")
+						img(src=img+"slider/goods_1.jpg", alt="")
+					a(href=img+"slider/goods_1.jpg" data-fancybox="image")
+						img(src=img+"slider/goods_1.jpg", alt="")
+
+					.foto__video.lazy(data-src="https://img.youtube.com/vi/kdhCfhxZhrk/maxresdefault.jpg ")
+						a(data-fancybox href="https://www.youtube.com/watch?v=kdhCfhxZhrk") 
+							.foto__play 
+								img.lazy(data-src=img+"play_button.png")
+				
+				

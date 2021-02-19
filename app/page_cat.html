@@ -843,6 +843,57 @@
       <a class="privacy-link" href="privacy.html">Политика конфиденциальности</a>
     </div>
   </footer>
+  <div class="popup" id="popup_feedback">
+    <div class="feedback">
+      <div class="title title_form">Покупали данную продукцию?</div>
+      <div class="feedback__subtitle">Оставьте своё мнение</div>
+      <form class="feedback__form" action="/">
+        <label class="feedback__label feedback__label_name">
+          <svg class="stars__icon">
+            <use xlink:href="/img/sprite_form.svg#user"></use>
+          </svg>
+          <input class="feedback__input" type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off" />
+        </label>
+        <textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
+        <div class="feedback__questions">Сколько звёзд вы бы порекомендовали?</div>
+        <input type="hidden" name="stars" value="value" />
+        <div class="stars stars_form">
+          <div class="stars__item" data-rate="1">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="2">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="3">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="4">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="5">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+        </div>
+        <button class="button button_submit" type="submit" value="submit">Отправить</button>
+        <div class="feedback__consent">Я прочитал(а) и даю согласие на обработку своих персональных данных.</div>
+      </form>
+    </div>
+  </div>
+  <div class="popup" id="thanks">
+    <div class="feedback">
+      <div class="title title_form">Сообщение отправлено</div>
+    </div>
+  </div>
   <script src="js/jquery/dist/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js" type="text/javascript"></script>
   <script src="js/libs.js"></script>
