@@ -1,0 +1,27 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('Статьи','Проблемы в кормлении кошек')
+			+title('Проблемы в кормлении кошек','','h1','','inner')
+
+			+article-single()
+			.button__wrapper
+				+button('Предыдущая статья','button_article','','','','','','sibling')
+				+button('Следующая статья','button_article button_article_next','','','','','','sibling')
+				
+			
+			+title('Возможно вам будут интересны','title_green','h1','','inner')
+			+article('slider')
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

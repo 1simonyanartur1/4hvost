@@ -1,0 +1,74 @@
+- var img = '../img/';
+include main
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+
+			section.mainblock
+				.slider
+					.slide.slide1
+						.container
+							.slide-left
+								.slide__title Похолодало!
+								.slide__text Возьмите большую упаковку корма для стерилизованных любимцев
+								.slide__subtitle и получите в подарок 2 кг!
+								.slide__text *количество запасов ограничено
+								
+								+button('Запастись','button_red button_margin','','/')
+							.slide-right
+								.circle
+									.circle__text <span>10+2кг</span> в подарок*
+								img.tape1(src=img+"mainblock/slide1/tape1.png", alt="")
+								img.tape2(src=img+"mainblock/slide1/tape2.png", alt="")
+								img.cat(src=img+"mainblock/slide1/cat.png", alt="")
+								img.logo(src=img+"mainblock/slide1/logo.png", alt="")
+								img.food(src=img+"mainblock/slide1/food.png", alt="")
+					.slide.slide1
+						.container
+							.slide-left
+								.slide__title Похолодало!
+								.slide__text Возьмите большую упаковку корма для стерилизованных любимцев
+								.slide__subtitle и получите в подарок 2 кг!
+								.slide__text *количество запасов ограничено
+								+button('Запастись','button_red button_margin','','/')
+							.slide-right
+								.circle
+									.circle__text <span>10+2кг</span> в подарок*
+								img.tape1(src=img+"mainblock/slide1/tape1.png", alt="")
+								img.tape2(src=img+"mainblock/slide1/tape2.png", alt="")
+								img.cat(src=img+"mainblock/slide1/cat.png", alt="")
+								img.logo(src=img+"mainblock/slide1/logo.png", alt="")
+								img.food(src=img+"mainblock/slide1/food.png", alt="")
+
+			+categories()
+			+slider('Рекомендуем')
+			+slider('Новые поступления')
+			
+			section.about
+				.container
+					.inner
+						.about__title Совершать покупки у нас <b>УДОБНО И ВЫГОДНО!</b>
+						img.bowl(src=img+"about/bowl.png", alt="")
+						img.business-card(src=img+"about/business-card.png", alt="")
+						img.icons(src=img+"about/icons.png", alt="")
+					ul.list
+						li Доступные цены, выгодные акции, дисконтная <br> система <div class="line"></div>
+						li Качественные товары от официальных <br> поставщиков <div class="line"></div>
+						li Доставка по г. Самара и в регионы России <div class="line"></div>
+						li Большой выбор товаров для любого питомца <div class="line"></div>
+						li Оплата наличными или картой на сайте или <br> при доставке <div class="line"></div>
+						li Помощь менеджера при выборе товара онлайн <br> и по телефону <div class="line"></div>
+
+			+discount()
+
+			+partners()
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

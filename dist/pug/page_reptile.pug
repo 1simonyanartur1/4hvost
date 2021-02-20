@@ -1,0 +1,29 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('','Рептилии')
+			section.section.section_banner
+				
+				+banner('dog','','')
+
+			+categories()
+			+catalog('dogs','type','','','','','','reptil','footprint')
+
+						 
+			
+			+slider('Вам может понравиться')
+			+discount()
+
+			+partners()
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

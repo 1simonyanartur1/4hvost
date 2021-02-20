@@ -1,0 +1,196 @@
+.product
+	display: flex !important
+	flex-direction: column
+	letter-spacing: 0.03em
+	position: relative
+	margin: 10px !important
+	height: unset
+	&.new
+		.new
+			display: flex
+	&.discount
+		.discount
+			display: flex
+		.product-price
+			&__curr
+				color: $green
+				font-style: normal
+				font-weight: 600
+				font-size: 30px
+				&::after
+					color: $green
+					font-style: normal
+					font-weight: 600
+					font-size: 30px
+			&__old
+				display: inline-block
+
+	.new,
+	.discount
+		margin: 0 10px
+		width: 48px
+		height: 48px
+		border-radius: 100%
+		text-align: center
+		+flex(row, center, center, wrap)
+		color: white
+		font-weight: 700
+		font-size: 15px
+		background: $red
+		line-height: 1
+		display: none
+	.new
+		margin: 0
+	.choose
+		margin-left: 5px
+		background: none
+		cursor: pointer
+		svg
+			width: 20px
+
+		&.active,
+		&:hover
+			svg
+				path
+					fill: $red
+
+		&_love
+			svg
+				path
+					+trs
+					fill: transparent
+					stroke: $red
+					stroke-width: 55
+
+		&__box
+			margin: 0 0 0 auto
+
+	&-labels
+		padding: 10px
+		+flex(row, between, start, wrap)
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		width: 100%
+	&-img
+		+flex(row, center, center, nowrap)
+		background: white
+		border: 1px solid $gray_light2
+		height: 408px
+		width: 100%
+		+mq($max-width: 700px)
+			height: 300px
+	&__img
+		display: block
+		width: 90%
+		height: auto
+		max-height: 90%
+		object-fit: contain
+	&__articul
+		margin: 14px 0
+		text-align: right
+		font-weight: 500
+		font-size: 14px
+		letter-spacing: 0.03em
+		color: $gray
+		+mq($max-width: 575px)
+			font-size: 12px
+	&__title
+		flex: 1
+
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		color: #686868
+		padding: 0 10px 0 0
+		+mq($max-width: 1500px)
+			font-size: 16px
+		+mq($max-width: 575px)
+			font-size: 14px
+			line-height: 1
+	&-price
+		margin: 40px 0 20px
+		text-align: left
+		font-size: 30px
+		font-weight: 600
+
+		display: flex
+		align-items: center
+		+mq($max-width: 575px)
+			font-size: 16px
+			margin: 10px 0
+		&__curr
+			display: inline-block
+			color: $dark
+			&::after
+				content: '₽'
+				display: inline-block
+				font-size: 30px
+				margin: 0 0 0 5px
+				+mq($max-width: 575px)
+					font-size: 14px
+		&__old
+			display: none
+			color: $price_old
+			font-style: normal
+			font-weight: normal
+			font-size: 23px
+			line-height: normal
+			margin-left: 10px
+			text-align: center
+			letter-spacing: 0.03em
+			text-decoration-line: line-through
+			position: relative
+			// &::before
+			// 	content: ''
+			// 	display: block
+			// 	width: 100%
+			// 	height: 2px
+			// 	background: $gray
+			// 	position: absolute
+			// 	transform: translate(-50%, -50%) rotate(-15deg)
+			// 	left: 50%
+			// 	top: 50%
+			&::after
+				content: '₽'
+				display: inline-block
+				font-size: 18px
+				margin: 0 0 0 5px
+				+mq($max-width: 575px)
+					font-size: 14px
+	&-line
+		+flex(row, between, center, wrap)
+	// &__btn
+	// 	+trs
+	// 	cursor: pointer
+	// 	width: calc(50% - 2px)
+	// 	background: $green
+	// 	padding: 9px
+	// 	font-size: 14px
+	// 	color: white
+	// 	+flex(row, center, center, wrap)
+	// 	&:hover
+	// 		background: $red
+	// 	span
+	// 		margin: 0 0 0 14px
+	// 	svg
+	// 		path
+	// 			fill: white
+	// &__link
+	// 	+trs
+	// 	cursor: pointer
+	// 	width: calc(50% - 2px)
+	// 	text-align: center
+	// 	height: 40px
+	// 	font-size: 14px
+	// 	color: white
+	// 	+flex(row, center, center, wrap)
+	// 	color: $green
+	// 	+mq($max-width: 700px)
+	// 		padding: 0 5px
+	// 	&:hover
+	// 		color: $red

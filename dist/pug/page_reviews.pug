@@ -1,0 +1,28 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('','Отзывы')
+			
+			+title('Отзывы наших клиентов','','h1','','inner')
+			.button__wrapper
+				+button('Добавить отзыв','button_review','','','','#popup_feedback')
+				
+			
+			+review()
+			.button__wrapper
+				+button('Показать больше','button_more','','/')
+
+
+
+		include blocks/footer.pug
+		
+		include blocks/scripts.pug

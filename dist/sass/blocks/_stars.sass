@@ -1,0 +1,29 @@
+.stars
+    display: flex
+    align-items: center
+
+    &__item
+        margin: 0 0px
+        height: 22px
+        width: 22px
+        
+        &:first-child
+            margin-left: 30px;
+        .stars__icon
+            height: 100%
+            width: 100%
+            fill: #D2D2D2
+            +trs
+
+        &_active
+            .stars__icon
+                fill: $gold
+                +trs
+    &_form
+        padding: 0 0 35px
+        .stars__item
+            height: 35px
+            width: 35px
+            cursor: pointer
+            &:first-child
+                margin-left: 0;

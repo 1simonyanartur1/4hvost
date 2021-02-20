@@ -1,0 +1,150 @@
+.about
+	padding: 100px 0
+	background: $gray_light
+	+mq($max-width: 1200px)
+		padding: 40px 0
+	.container
+		max-width: 1560px
+		+flex(row, between, center, wrap)
+		+mq($max-width: 1500px)
+			max-width: 100%
+			padding: 0 15px
+	.inner
+		position: relative
+		+mq($max-width: 1200px)
+			margin: 0 0 25px 0
+	.bowl
+		display: block
+		max-width: 770px
+		width: 100%
+		+mq($max-width: 1500px)
+			max-width: 600px
+		+mq($max-width: 1200px)
+			max-width: 80%
+		+mq($max-width: 700px)
+			display: none
+	.business-card
+		position: absolute
+		z-index: 2
+		left: 0
+		bottom: 0
+		transform: translate(0, 10%)
+		width: 60%
+		+mq($max-width: 1500px)
+		+mq($max-width: 700px)
+			display: none
+	.icons
+		position: absolute
+		z-index: 2
+		right: 0
+		height: 110%
+		top: 0
+		transform: translate(23%, -6%)
+		+mq($max-width: 1000px)
+			transform: translate(-23%, -6%)
+		+mq($max-width: 700px)
+			display: none
+	&__title
+		font-size: 35px
+		font-weight: 700
+		position: absolute
+		left: 0
+		top: 0
+		+mq($max-width: 1500px)
+			font-size: 28px
+		+mq($max-width: 700px)
+			position: static
+		+mq($max-width: 575px)
+			font-size: 22px
+		b
+			display: block
+			font-size: 42px
+			font-weight: 800
+			line-height: 1.5
+			+mq($max-width: 1500px)
+				font-size: 34px
+			+mq($max-width: 575px)
+				font-size: 26px
+	.list
+		margin: 0 auto 0 170px
+		font-size: 18px
+		font-weight: 500
+		line-height: 1.45
+		+mq($max-width: 1500px)
+			margin: 0 auto
+		+mq($max-width: 1200px)
+			margin: 0 auto 0 25px
+		+mq($max-width: 575px)
+			font-size: 14px
+		.line
+			border-top: 4px solid rgba(230, 47, 104, 0.7)
+			border-right: 4px solid rgba(230, 47, 104, 0.7)
+			position: absolute
+			right: calc( 100% + 19px )
+			bottom: 80%
+			+mq($max-width: 1500px)
+				display: none
+		li
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: 14px
+				height: 14px
+				background: $pink
+				border-radius: 100%
+				left: -28px
+				top: 4px
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				width: 18px
+				height: 18px
+				background: transparent
+				border-radius: 100%
+				border: 1px solid $pink
+				left: -31px
+				top: 1px
+			&:not(:last-child)
+				margin: 0 0 57px 0
+				+mq($max-width: 1500px)
+					margin: 0 0 40px 0
+				+mq($max-width: 1200px)
+					margin: 0 0 15px 0
+			&:nth-child(1)
+				.line
+					width: 295px
+					height: 45px
+			&:nth-child(2)
+				.line
+					width: 140px
+					height: 35px
+			&:nth-child(3)
+				.line
+					width: 87px
+					height: 4px
+					bottom: 50%
+			&:nth-child(4)
+				.line
+					width: 87px
+					height: 4px
+					bottom: 50%
+			&:nth-child(5)
+				.line
+					width: 142px
+					height: 48px
+					bottom: auto
+					top: 15px
+					border-top: none
+					border-bottom: 4px solid rgba(230, 47, 104, 0.7)
+			&:nth-child(6)
+				.line
+					bottom: auto
+					top: 15px
+					width: 282px
+					height: 48px
+					border-top: none
+					border-bottom: 4px solid rgba(230, 47, 104, 0.7)
+

@@ -1,0 +1,19 @@
+mixin feedback(reviews,thanks)
+    if reviews
+        .feedback
+            +title('Покупали данную продукцию?','','','','','form')
+            .feedback__subtitle Оставьте своё мнение
+            form(action="/").feedback__form
+                label.feedback__label.feedback__label_name
+                    svg.stars__icon
+                            use(xlink:href="/img/sprite_form.svg#user")
+                    input(type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off").feedback__input
+                <textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
+                .feedback__questions Сколько звёзд вы бы порекомендовали?
+                input(type="hidden" name="stars" value)
+                +stars('','','','empty')
+                +button('Отправить','button_submit','submit')
+                .feedback__consent Я прочитал(а) и даю согласие на обработку своих персональных данных.
+    else if thanks 
+        .feedback
+            +title('Сообщение отправлено','','','','','form')

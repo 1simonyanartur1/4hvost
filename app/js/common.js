@@ -1,9 +1,9 @@
 (function ($) {
 
-	
+
 	$(function () {
 		$('.lazy').Lazy();
-	  });
+	});
 
 	$(document).ready(function () {
 
@@ -21,7 +21,7 @@
 			}
 			$scrollPos = $st;
 		});
-		
+
 
 		// SmartMenus init
 		$(function () {
@@ -46,7 +46,7 @@
 			infinite: true
 		});
 
-		$(document).on('click', '.product .choose', function() {
+		$(document).on('click', '.product .choose', function () {
 			$(this).toggleClass('active');
 		});
 
@@ -59,8 +59,7 @@
 			slidesToScroll: 1,
 			infinite: false,
 			adaptiveHeight: true,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1800,
 					settings: {
 						slidesToShow: 4
@@ -95,8 +94,7 @@
 			slidesToShow: 6,
 			slidesToScroll: 1,
 			infinite: true,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1200,
 					settings: {
 						slidesToShow: 4
@@ -121,8 +119,7 @@
 			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: false,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1200,
 					settings: {
 						slidesToShow: 1
@@ -145,8 +142,7 @@
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			infinite: false,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1200,
 					settings: {
 						slidesToShow: 3
@@ -161,6 +157,11 @@
 			]
 		});
 
+
+		var fotoArrow = '<svg width="33" height="38" viewBox="0 0 33 38" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+			'<path d="M32.9277 18.8505L0.677733 37.47L0.677734 0.230916L32.9277 18.8505Z" fill="#02A950"/>' +
+			'</svg>'
+
 		$('.foto__images').slick({
 			lazyload: 'ondemand',
 			slidesToShow: 1,
@@ -168,65 +169,107 @@
 			arrows: false,
 			fade: true,
 			asNavFor: '.foto__slider',
-			
+			infinite: false,
+
 			dots: false,
-		  });
-		  $('.foto__slider').slick({
+		});
+		$('.foto__slider').slick({
 			lazyload: 'ondemand',
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			asNavFor: '.foto__images',
 			dots: false,
-			vertical: true,
+			infinite: false,
+
 			focusOnSelect: true,
-			nextArrow: '<div class="foto__arrow  foto__arrow_next"></div>',
-			prevArrow: '<div class="foto__arrow  foto__arrow_prev"></div>',
+			nextArrow: '<div class="foto__arrow  foto__arrow_next">' + fotoArrow + '</div>',
+			prevArrow: '<div class="foto__arrow  foto__arrow_prev">' + fotoArrow + '</div>',
 			appendArrows: $('.foto__arrows'),
 			responsive: [
-			 
-			  {
-				breakpoint: 600,
-				settings: {
-				  slidesToShow: 3,
-				  slidesToScroll: 2
+
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
 				}
-			  },
-			  {
-				breakpoint: 480,
-				settings: {
-				  slidesToShow: 3,
-				  slidesToScroll: 1
-				}
-			  }]
-		  });
-		  
+			]
+		});
 
 
 
-		$('.stars_form .stars__item').on('click',function(){
+
+		$('.stars_form .stars__item').on('click', function () {
 			var rate = $(this).attr('data-rate')
 			console.log(rate);
 			var inputStars = $('input[name="stars"]')
 			inputStars.val(rate)
-		  
-			if($('#rate').length > 0){
-			  $('#rate').val(rate)
+
+			if ($('#rate').length > 0) {
+				$('#rate').val(rate)
 			}
-		  
-			$('.stars_form .stars__item').each(function(indx){
-			  if(indx >= rate){
-				  $(this).removeClass('stars__item_active')
-			  }else{
-				$(this).addClass('stars__item_active')
-			  }
+
+			$('.stars_form .stars__item').each(function (indx) {
+				if (indx >= rate) {
+					$(this).removeClass('stars__item_active')
+				} else {
+					$(this).addClass('stars__item_active')
+				}
 			})
-		  
-		  })
+
+		})
 
 
 
 
 
+
+		const mediaQuery_767 = window.matchMedia('(max-width: 767px)')
+
+		
+
+		function resizeElem(e) {
+			if (e.matches) {
+
+				$('.foto').each(function () {
+					$(this).css('width', $('.goods__inner').width())
+					console.log($('.goods__inner').width());
+				})
+			} else {
+
+				$('.foto').each(function () {
+					$(this).css('width', '470px')
+				})
+			}
+		}
+
+
+
+		mediaQuery_767.addListener(resizeElem)
+		resizeElem(mediaQuery_767)
+
+		// goods calc
+		goodsCalc()
+
+
+
+
+		function goodsCalc(quantity) {
+			var goodsQuantity = parseInt($('.goods__input').val())
+			var goodsPrice = parseInt(($('.goods__price span')).text())
+			var goodsTotal = goodsQuantity * goodsPrice
+
+			$('.goods__total span').text(goodsTotal + '\u00A0₽')
+			console.log(goodsPrice, goodsTotal, goodsQuantity);
+		}
 
 	});
 })(jQuery);

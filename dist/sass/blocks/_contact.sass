@@ -1,0 +1,111 @@
+.contact
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 40px
+	position: relative
+
+	+mq($max-width: 1024px)
+		grid-template-columns: 1fr
+		grid-template-areas: "content" "map"
+		grid-gap: 20px
+
+	&__image
+		position: absolute
+		bottom: -22px
+		right: -58px
+		width: 377.79px
+		height: 406.67px
+		transform: rotate(22deg)
+
+	&__map
+		+mq($max-width: 1024px)
+			grid-area: map
+		+mq($max-width: 768px)
+			height: 400px
+		+mq($max-width: 575px)
+			height: 200px
+
+	&__content
+		padding: 10px 20px 80px 0
+
+		+mq($max-width: 1024px)
+			grid-area: content
+			padding: 20px
+		+mq($max-width: 575px)
+			padding: 15px
+	&__title
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 30px
+		margin-bottom: 40px
+
+		color: $dark
+
+		+mq($max-width: 575px)
+			font-size: 18px
+			margin-bottom: 30px
+
+	&__box
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 55px
+
+		+mq($max-width: 1023px)
+			grid-gap: 20px
+		+mq($max-width: 575px)
+			grid-template-columns: 1fr
+			grid-gap: 30px
+	&__item
+		display: flex
+		flex-flow: wrap
+	&__address
+		font-family: Gilroy
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		margin-bottom: 15px
+
+		letter-spacing: 0.03em
+
+		color: #000000
+		display: flex
+		flex-direction: row-reverse
+		justify-content: flex-end
+		width: 100%
+
+		+mq($max-width: 1023px)
+			font-size: 16px
+			margin-bottom: 10px
+
+		svg
+			margin-right: 10px
+			margin-top: 2px
+			+mq($max-width: 1023px)
+			flex: 0 0 20px
+
+	&__phone
+		font-family: Gilroy
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+
+		letter-spacing: 0.03em
+
+		color: #000000
+		display: flex
+		flex-direction: row-reverse
+		justify-content: flex-end
+
+		+mq($max-width: 1023px)
+			font-size: 16px
+
+		&:not(last-child)
+			margin-right: 20px
+			margin-bottom: 5px
+
+		svg
+			margin-right: 10px
+			margin-top: 2px
+			+mq($max-width: 1023px)
+				flex: 0 0 20px

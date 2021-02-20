@@ -1,0 +1,25 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('Акции и скидки','Название выбранной акции')
+			//- +title('Акции и скидки','','h1','','inner')
+			
+			
+			+action('','full')
+			+slider('Товары входящие в предложение','title_center')
+			+title('Дополнительные акции','','','h2','inner')
+			+action('','','slider')
+
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

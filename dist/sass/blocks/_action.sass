@@ -1,0 +1,133 @@
+.action
+
+    border: 1px solid $line
+    padding: 15px
+    display: flex !important
+    cursor: pointer;
+    +mq($max-width: 768px)
+        padding: 0
+
+    
+
+    &:hover
+        .action__title
+            text-decoration: underline
+
+    &_single
+        border: none
+        align-items: flex-start
+        
+        cursor: default;
+
+        &:hover
+            .action__title
+                text-decoration: none;
+        .action__text
+            column-count: 2
+            column-gap: 40px
+            column-width: 50%
+
+            +mq($max-width: 1023px)
+                column-count: unset
+                
+    &__image
+        flex: 0 0 330px
+        height: 360px
+
+        +mq($max-width: 1650px)
+            flex: 0 0 250px
+        +mq($max-width: 1200px)
+            flex: 0 0 200px
+        +mq($max-width: 1024px)
+            flex: 0 0 350px
+        +mq($max-width: 768px)
+            display: none
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: contain
+
+    &__content
+        padding: 25px
+        +mq($max-width: 768px)
+            padding: 20px
+    &__date
+        display: flex
+        flex-direction: row-reverse
+        justify-content: flex-end
+
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        color: $pink
+
+        margin-bottom: 30px
+
+        +mq($max-width: 768px)
+            margin-bottom: 15px
+        svg
+            height: 23px
+            width: 18px
+            margin-right: 11px
+    &__title
+        font-style: normal
+        font-weight: bold
+        font-size: 35px
+        line-height: 43px
+        color: $green
+        margin-bottom: 20px
+
+        +mq($max-width: 768px)
+            margin-bottom: 15px
+            line-height: normal
+            font-size: 20px
+
+    &__text
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 26px
+        color: $dark_action
+
+        p
+            font-style: normal
+            font-weight: 500
+            font-size: 16px
+            line-height: 26px
+            color: $dark_action
+            margin-bottom: 20px;
+    &__box
+        width: 100%
+        padding: 30px 0
+
+    &__inner
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+
+        padding: 0
+        margin: 0 auto
+        max-width: 1560px
+        +mq($max-width: 1650px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 1200px)
+            padding: 0 15px
+            max-width: 100%
+        +mq($max-width: 1024px)
+            grid-template-columns: 1fr
+        +mq($max-width: 575px)
+            padding: 0 10px
+
+        &_single
+            display: block
+
+        &_slider
+            display: block;
+            +mq($max-width: 1680px)
+                max-width: 86%
+            .action
+                margin: 0 10px;

@@ -3,10 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
@@ -170,62 +167,62 @@
       </div>
     </div>
   </header>
+  <div class="popup" id="popup_feedback">
+    <div class="feedback">
+      <div class="title title_form">Покупали данную продукцию?</div>
+      <div class="feedback__subtitle">Оставьте своё мнение</div>
+      <form class="feedback__form" action="/">
+        <label class="feedback__label feedback__label_name">
+          <svg class="stars__icon">
+            <use xlink:href="/img/sprite_form.svg#user"></use>
+          </svg>
+          <input class="feedback__input" type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off" />
+        </label>
+        <textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
+        <div class="feedback__questions">Сколько звёзд вы бы порекомендовали?</div>
+        <input type="hidden" name="stars" value="value" />
+        <div class="stars stars_form">
+          <div class="stars__item" data-rate="1">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="2">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="3">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="4">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+          <div class="stars__item" data-rate="5">
+            <svg class="stars__icon">
+              <use xlink:href="/img/sprite_star.svg#star"></use>
+            </svg>
+          </div>
+        </div>
+        <button class="button button_submit" type="submit" value="submit">Отправить</button>
+        <div class="feedback__consent">Я прочитал(а) и даю согласие на обработку своих персональных данных.</div>
+      </form>
+    </div>
+  </div>
+  <div class="popup" id="thanks">
+    <div class="feedback">
+      <div class="title title_form">Сообщение отправлено</div>
+    </div>
+  </div>
   <main class="page-container">
     <div class="breadcrumbs">
       <div class="breadcrumbs__inner">
         <a class="breadcrumbs__link" href="/">Главная</a>
         <div class="breadcrumbs__item">Отзывы</div>
-      </div>
-    </div>
-    <div class="popup" id="popup_feedback">
-      <div class="feedback">
-        <div class="title title_form">Покупали данную продукцию?</div>
-        <div class="feedback__subtitle">Оставьте своё мнение</div>
-        <form class="feedback__form" action="/">
-          <label class="feedback__label feedback__label_name">
-            <svg class="stars__icon">
-              <use xlink:href="/img/sprite_form.svg#user"></use>
-            </svg>
-            <input class="feedback__input" type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off" />
-          </label>
-          <textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
-          <div class="feedback__questions">Сколько звёзд вы бы порекомендовали?</div>
-          <input type="hidden" name="stars" value="value" />
-          <div class="stars stars_form">
-            <div class="stars__item" data-rate="1">
-              <svg class="stars__icon">
-                <use xlink:href="/img/sprite_star.svg#star"></use>
-              </svg>
-            </div>
-            <div class="stars__item" data-rate="2">
-              <svg class="stars__icon">
-                <use xlink:href="/img/sprite_star.svg#star"></use>
-              </svg>
-            </div>
-            <div class="stars__item" data-rate="3">
-              <svg class="stars__icon">
-                <use xlink:href="/img/sprite_star.svg#star"></use>
-              </svg>
-            </div>
-            <div class="stars__item" data-rate="4">
-              <svg class="stars__icon">
-                <use xlink:href="/img/sprite_star.svg#star"></use>
-              </svg>
-            </div>
-            <div class="stars__item" data-rate="5">
-              <svg class="stars__icon">
-                <use xlink:href="/img/sprite_star.svg#star"></use>
-              </svg>
-            </div>
-          </div>
-          <button class="button button_submit" type="submit" value="submit">Отправить</button>
-          <div class="feedback__consent">Я прочитал(а) и даю согласие на обработку своих персональных данных.</div>
-        </form>
-      </div>
-    </div>
-    <div class="popup" id="thanks">
-      <div class="feedback">
-        <div class="title title_form">Сообщение отправлено</div>
       </div>
     </div>
     <div class="title">

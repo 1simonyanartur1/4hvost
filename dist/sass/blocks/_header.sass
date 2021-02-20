@@ -1,0 +1,432 @@
+.header
+	padding: 53px 0 0 0
+	.container
+		max-width: 1560px
+		+mq($max-width: 1650px)
+			padding: 0 15px
+	.logo
+		+mq($max-width: 575px)
+			margin: 0 auto 15px
+		&__img
+			display: block
+			width: 306px
+			+mq($max-width: 1500px)
+				width: 250px
+			+mq($max-width: 1200px)
+				width: 150px
+	.search
+		width: 307px
+		position: relative
+		+mq($max-width: 1500px)
+			width: 250px
+		&__input
+			display: block
+			width: 100%
+			+trs
+			background: white
+			height: 37px
+			border-radius: 37px
+			padding: 0 45px
+			text-align: right
+			letter-spacing: 0.03em
+			font-size: 14px
+			color: $gray2
+			font-weight: 700
+			&::placeholder
+				font-weight: 700
+				font-size: 14px
+				color: $gray2
+				letter-spacing: 0.03em
+				text-align: right
+				+trs
+			&:focus
+				text-align: left
+				&::placeholder
+					text-align: left
+		&__btn
+			position: absolute
+			right: 0
+			top: 0
+			background: none
+			width: 37px
+			height: 37px
+			cursor: pointer
+			border-radius: 37px
+			+flex(row, center, center, nowrap)
+			&:hover
+				background: $green
+				svg
+					circle,
+					path
+						stroke: white
+			svg
+				display: block
+				width: 21px
+				circle,
+				path
+					+trs
+					stroke: $green
+	&-top
+		background: $gray2
+		padding: 8px 0
+		position: fixed
+		left: 0
+		top: 0
+		width: 100%
+		z-index: 10
+		+trs
+		&.scroll
+			background: $green
+			.main-menu-btn-icon, .main-menu-btn-icon:before, .main-menu-btn-icon:after
+				background: white
+			#main-menu>li>a
+				color: white
+				+mq($max-width: 1200px)
+					color: $dark
+				.sub-arrow
+					border-color: white transparent transparent transparent
+		.container
+			+flex(row, between, center, wrap)
+	&-bottom
+		padding: 15px 0
+		border-bottom: 1px solid $line
+		.container
+			+flex(row, between, center, wrap)
+	.links
+		+flex(row, null, center, wrap)
+		margin: 0 0 0 auto
+		+mq($max-width: 700px)
+			width: 100%
+		+mq($max-width: 575px)
+			flex-direction: column
+			align-items: center
+		&-block
+			+flex(row, null, center, wrap)
+			+mq($max-width: 575px)
+				margin: 0 0 15px 0
+	.tel
+		margin: 0 65px 0 50px
+		color: $dark
+		font-size: 22px
+		font-weight: 700
+		position: relative
+		+mq($max-width: 1200px)
+			margin: 0 10px
+			font-size: 16px
+		+mq($max-width: 575px)
+			margin: 0
+		&:hover
+			color: $green
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			left: -50px
+			top: 50%
+			transform: translate(0, -50%)
+			width: 38px
+			height: 38px
+			+bg(null, $green, 'icons/tel.svg', no-repeat, center, center, auto)
+			border-radius: 100%
+			+mq($max-width: 1200px)
+				display: none
+		span
+			color: $green
+	.callback
+		color: $gray
+		font-weight: 600
+		margin: 0 14px
+		&:hover
+			color: $red
+	.choose-link
+		margin: 0 10px 0 0
+		background: none
+		cursor: pointer
+		position: relative
+		+mq($max-width: 575px)
+			margin: 0 10px 0 0
+		svg
+			width: 25px
+			height: 25px
+			path
+				+trs
+				// fill: transparent
+				// stroke: $dark
+				// stroke-width: 55
+		&:hover
+			svg
+				path
+					// stroke: $red
+					fill: $red
+	.user-link
+		+flex(row, null, center, wrap)
+		margin: 0
+		color: $dark
+		letter-spacing: 0.03em
+		font-weight: normal
+		font-size: 14px
+		margin: 0 27px
+		+mq($max-width: 1200px)
+			margin: 0 15px
+		+mq($max-width: 575px)
+			margin: 0
+		&:hover
+			color: $green
+			svg
+				circle,
+				path
+					stroke: $red
+		svg
+			circle,
+			path
+				+trs
+				stroke: $dark
+		span
+			margin: 0 0 0 8px
+	.basket-link
+		+flex(row, null, center, nowrap)
+		&:hover
+			svg
+				path
+					fill: $red
+					+trs
+				// circle
+				// 	fill: $red
+		&-icon
+			position: relative
+			margin: 0 15px 0 0
+		svg
+			display: block
+			height: 33px
+			// path
+			path
+				+trs
+			// 	stroke: $dark
+			// circle
+			// 	+trs
+			// 	fill: $dark
+		// .count
+		// 	min-width: 17px
+		// 	height: 17px
+		// 	+flex(row, center, center, nowrap)
+		// 	position: absolute
+		// 	right: 0
+		// 	bottom: 0
+		// 	z-index: 2
+		// 	border-radius: 8.5px
+		// 	background: white
+		// 	box-shadow: 0 0 0 2px white
+		// 	color: $green
+		// 	font-weight: 900
+		// 	font-size: 10px
+		// 	line-height: 1
+		// 	padding: 0 3px
+		// 	border: 2.5px solid $green
+		// 	letter-spacing: 0.03em
+
+		// 	box-shadow: 0px 0px 0px 2px #FFFFFF
+		span
+			font-weight: 500
+			font-size: 18px
+			line-height: 22px
+
+			color: $green
+			display: inline-block
+			width: 100%
+			max-width: 50px
+			&::after
+				content: '₽'
+				color: $green
+				margin: 0 0 0 0px
+
+	#main-menu-state:not(:checked) ~ #main-menu
+		+mq($max-width: 1200px)
+			display: none
+	#main-menu-state:checked ~ #main-menu
+		// +mq($max-width: 1200px)
+			// +flex(row, null, center, wrap)
+	#main-menu
+		+mq($min-width: 320px)
+			padding: 0
+			position: absolute
+			left: 0
+			top: 100%
+			width: 100%
+			border-radius: 0
+		+mq($min-width: 1200px)
+			+flex(row, null, center, wrap)
+			margin: 0
+			padding: 0
+			border-radius: 0
+			border: none
+			background: none
+			box-shadow: none
+			width: auto
+			position: static
+		ul
+			+mq($min-width: 320px)
+				margin: 0
+				padding: 0
+				border-radius: 0 !important
+				border: none
+				background: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				&:before,
+				&:after
+					display: none
+		li
+			+mq($min-width: 320px)
+				border-radius: 0
+				border: none !important
+			+mq($min-width: 1200px)
+				margin: 0
+				border-radius: 0
+				padding: 0
+				border: none
+				background: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				&:before,
+				&:after
+					display: none
+		a
+			+mq($min-width: 320px)
+				border-radius: 0
+				border: none !important
+			+mq($min-width: 1200px)
+				background: none
+				margin: 0
+				border-radius: 0
+				padding: 0
+				border: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				color: black
+			&.has-submenu
+				position: relative
+				padding-left: 0
+				+mq($max-width: 1200px)
+					padding-left: 15px
+				&[aria-expanded="true"]
+					.sub-arrow
+						&:before
+							content: '-'
+			&.highlighted
+				color: inherit !important
+				background: inherit !important
+		.sub-arrow
+			+mq($max-width: 1200px)
+				width: 30px
+				height: 30px
+				top: 50%
+				right: 10px
+				transform: translate(0, -50%)
+				border: 1px solid $dark
+				position: absolute
+				margin: 0
+				z-index: 2
+				&:before
+					content: '+'
+					display: block
+					font-size: 15px
+					line-height: 30px
+			+mq($min-width: 1200px)
+				right: 2px
+		ul
+			min-width: 100% !important
+			+mq($min-width: 320px)
+				position: static
+				background: $green
+			+mq($min-width: 1200px)
+				position: absolute
+				background: white
+				padding: 35px
+				border: 2px solid $gray2
+				top: 35px !important
+			ul
+				+mq($min-width: 320px)
+					position: static
+					margin: 0 !important
+					padding: 0 5px
+					background: white
+				+mq($min-width: 1200px)
+					padding: 0 0 0 0
+					position: absolute
+					margin-top: -100% !important
+					margin-left: 35px !important
+					top: -2px !important
+					left: 100% !important
+				& > li
+					+mq($min-width: 320px)
+						margin: 0 !important
+						display: inline-block
+						width: 49%
+					+mq($min-width: 575px)
+						width: 32%
+					+mq($min-width: 700px)
+						width: 19%
+					+mq($min-width: 1200px)
+						width: 100%
+					& > a
+						+mq($min-width: 320px)
+							color: $dark
+							padding: 10px
+			& > li
+				width: 100%
+				&:not(:last-child)
+					margin: 0 0 17px 0
+					+mq($max-width: 1200px)
+						margin: 0 0 5px 0
+				& > a
+					font-size: 14px
+					font-weight: 500
+					+mq($max-width: 1200px)
+						width: 100%
+						color: white
+						padding: 10px 45px 10px 15px
+					&.has-submenu
+						+mq($max-width: 1200px)
+							color: white !important
+							background: inherit !important
+						.sub-arrow
+							right: -12px
+							+mq($max-width: 1200px)
+								right: 10px
+								border-color: white
+					&.highlighted
+						+mq($max-width: 1200px)
+							color: white !important
+						.sub-arrow
+							+mq($max-width: 1200px)
+								border-color: white
+								color: white
+					+mq($min-width: 1200px)
+						&:hover
+							color: $pink
+							.sub-arrow
+								border-color: transparent transparent transparent $pink
+		& > li
+			position: relative
+			+mq($max-width: 1200px)
+				width: 100%
+			& > a
+				position: relative
+				padding: 0 25px
+				font-size: 14px
+				font-weight: 500
+				color: $dark
+				+mq($max-width: 1500px)
+					padding: 0 15px
+				+mq($max-width: 1200px)
+					padding: 15px 45px 15px 15px
+				+mq($min-width: 1200px)
+					&:hover
+						color: $pink
+
+.sm-clean ul a.current
+	+mq($min-width: 320px)
+		color: white
