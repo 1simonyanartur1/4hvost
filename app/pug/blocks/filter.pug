@@ -1,0 +1,193 @@
+mixin filter(catalog, actions)
+    if catalog
+        .filter
+            .filter__button.filter__button_open
+                
+            .filter__box
+                .filter__title Бренд
+                .filter__group
+                    
+                        input.filter__radio#radio_1(type="radio" name="group_1" checked)
+                        label.filter__label(for="radio_1") Деревенские лакомства
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_2(type="radio" name="group_1")
+                        label.filter__label(for="radio_2") Хеппи Дог
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_3(type="radio" name="group_1")
+                        label.filter__label(for="radio_3") Хеппи Дог
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+            
+            .filter__box
+                .filter__title Цена
+                .filter__group
+                    
+                        input.filter__radio#radio_4(type="radio" name="group_2" checked)
+                        label.filter__label(for="radio_4") Цена по возрастанию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_5(type="radio" name="group_2")
+                        label.filter__label(for="radio_5") Цена по убыванию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_6(type="radio" name="group_2")
+                        label.filter__label(for="radio_6") По умолчанию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+            .filter__box
+                .filter__title Возраст животного
+                .filter__group
+                    
+                        input.filter__radio#radio_7(type="radio" name="group_3" checked)
+                        label.filter__label(for="radio_7") от 2-3 месяцев
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_8(type="radio" name="group_3")
+                        label.filter__label(for="radio_8") от 1 до 2 лет
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_9(type="radio" name="group_3")
+                        label.filter__label(for="radio_9") 2 и более
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+            .filter__box
+                .filter__title Наличие
+                .filter__group
+                    
+                        input.filter__radio#radio_10(type="radio" name="group_4" checked)
+                        label.filter__label(for="radio_10") В наличии
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_11(type="radio" name="group_4")
+                        label.filter__label(for="radio_11") Со скидками
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+            +button('Фильтровать','button_red button_filter','submit')          
+
+    
+    else if actions
+        .filter
+            .filter__button.filter__button_open
+                
+            .filter__box
+                .filter__title Выбор опции
+                .filter__group
+                    
+                        input.filter__radio#radio_1(type="radio" name="group_1" checked)
+                        label.filter__label(for="radio_1") Наименование (от А до Я)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_2(type="radio" name="group_1")
+                        label.filter__label(for="radio_2") Наименование (от Я до А)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_3(type="radio" name="group_1")
+                        label.filter__label(for="radio_3") Цена по возрастанию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_4(type="radio" name="group_1")
+                        label.filter__label(for="radio_4") Цена по убыванию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_5(type="radio" name="group_1")
+                        label.filter__label(for="radio_5") По умолчанию
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+            
+            .filter__box
+                .filter__title Выбор животного
+                .filter__group
+                    
+                        input.filter__radio#radio_6(type="radio" name="group_2" checked)
+                        label.filter__label(for="radio_6") Собаки (99)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_7(type="radio" name="group_2")
+                        label.filter__label(for="radio_7") Кошки (19)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                    
+                        input.filter__radio#radio_8(type="radio" name="group_2")
+                        label.filter__label(for="radio_8") ГрумМир (12)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_9(type="radio" name="group_2")
+                        label.filter__label(for="radio_9") Птицы (0)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_10(type="radio" name="group_2")
+                        label.filter__label(for="radio_10") Грызуны (89)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_11(type="radio" name="group_2")
+                        label.filter__label(for="radio_11") Рыбки (34)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+                        input.filter__radio#radio_12(type="radio" name="group_2")
+                        label.filter__label(for="radio_12") Рептилии (78)
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                            </svg>
+            
+                    
+            +button('Фильтровать','button_red button_filter','submit')          
+
+    

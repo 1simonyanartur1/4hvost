@@ -229,12 +229,44 @@
 
 
 
+		var filterOpen = '<svg  width="512" height="512" x="0" y="0" viewBox="0 0 971.986 971.986" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">' +
+			'<path d="M370.216,459.3c10.2,11.1,15.8,25.6,15.8,40.6v442c0,26.601,32.1,40.101,51.1,21.4l123.3-141.3   c16.5-19.8,25.6-29.601,25.6-49.2V500c0-15,5.7-29.5,15.8-40.601L955.615,75.5c26.5-28.8,6.101-75.5-33.1-75.5h-873   c-39.2,0-59.7,46.6-33.1,75.5L370.216,459.3z" fill="#e62f68" data-original="#000000" style="" class=""/>' +
+			'</svg>'
+
+
+		var filterClose = '<svg  width="512" height="512" x="0" y="0" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">' +
+			'<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" fill="#e62f68" data-original="#000000" style="" class=""/>' +
+			'</svg>'
+
+		var filterButton = $('.filter__button')
+		var sidebarFilter = $('.section__sidebar')
+
+		filterButton.append(filterOpen)
+
+		filterButton.on('click', function () {
+
+			if ($(this).hasClass('filter__button_open')) {
+				sidebarFilter.animate({
+					left: 0
+				}, 300)
+				$(this).html('').removeClass('filter__button_open').append(filterClose)
+			} else {
+				sidebarFilter.animate({
+					left: '-220px'
+				}, 500)
+				$(this).html('').addClass('filter__button_open').append(filterOpen)
+			}
+
+		})
+
+		
+
 
 
 
 		const mediaQuery_767 = window.matchMedia('(max-width: 767px)')
 
-		
+
 
 		function resizeElem(e) {
 			if (e.matches) {
@@ -268,7 +300,7 @@
 			var goodsTotal = goodsQuantity * goodsPrice
 
 			$('.goods__total span').text(goodsTotal + '\u00A0₽')
-			console.log(goodsPrice, goodsTotal, goodsQuantity);
+			
 		}
 
 	});
