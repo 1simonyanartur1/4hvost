@@ -1,4 +1,4 @@
-mixin feedback(reviews,thanks,forgot)
+mixin feedback(reviews,thanks,forgot,change)
     if reviews
         .feedback
             +title('Покупали данную продукцию?','','','','','form')
@@ -20,13 +20,34 @@ mixin feedback(reviews,thanks,forgot)
     else if forgot 
         .feedback
             +title('Забыли пароль?','title_center','h1','','','')
-            .feedback__subtitle Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку «Восстановить», чтобы получить пароль по электронной почте.
+            .feedback__subtitle Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку <a href="">«Восстановить»</a>, чтобы получить пароль по электронной почте.
 
             form(action="/").feedback__form
                 label.feedback__label
                     svg.stars__icon
                             use(xlink:href="/img/sprite_form.svg#email")
                     input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+                
+                +button('Восстановить','button_submit','submit')
+
+
+    else if change 
+        .feedback
+            +title('Изменение контактной информации','title_center','h1','','','')
+            
+            form(action="/").feedback__form
+                label.feedback__label
+                    svg.stars__icon
+                            use(xlink:href="/img/sprite_form.svg#email")
+                    input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+                label.feedback__label
+                    svg.stars__icon
+                            use(xlink:href="/img/sprite_form.svg#user")
+                    input(type="text" placeholder="Ваш E-mail" name="feedback__name" autocomplete="off").feedback__input
+                label.feedback__label
+                    svg.stars__icon
+                            use(xlink:href="/img/sprite_form.svg#tel")
+                    input(type="text" placeholder="Ваш E-mail" name="feedback__phone" autocomplete="off").feedback__input
                 
                 +button('Восстановить','button_submit','submit')
                 
