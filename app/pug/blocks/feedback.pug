@@ -1,4 +1,4 @@
-mixin feedback(reviews,thanks)
+mixin feedback(reviews,thanks,forgot)
     if reviews
         .feedback
             +title('Покупали данную продукцию?','','','','','form')
@@ -17,3 +17,16 @@ mixin feedback(reviews,thanks)
     else if thanks 
         .feedback
             +title('Сообщение отправлено','','','','','form')
+    else if forgot 
+        .feedback
+            +title('Забыли пароль?','title_center','h1','','','')
+            .feedback__subtitle Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку «Восстановить», чтобы получить пароль по электронной почте.
+
+            form(action="/").feedback__form
+                label.feedback__label
+                    svg.stars__icon
+                            use(xlink:href="/img/sprite_form.svg#email")
+                    input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+                
+                +button('Восстановить','button_submit','submit')
+                

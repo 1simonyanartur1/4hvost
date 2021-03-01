@@ -7,14 +7,14 @@ html
 		title
 	body
 		+header1()
-		//- include blocks/header.pug
+		
 
 		main.page-container
 			+breadcrumbs('Личный кабинет','Мои личные данные')
 			section.section.section_banner
 				+return()
-				+title('Мои личные данные','title_center','h1 ')
-				+personal()
+				
+				+feedback('','','forgot')
 
 		include blocks/footer.pug
 		include blocks/scripts.pug
