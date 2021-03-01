@@ -1,0 +1,19 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('Личный кабинет','Мои личные данные')
+			section.section.section_banner
+				+title('Мои личные данные','title_center','h1 ')
+				+personal()
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

@@ -1,0 +1,158 @@
+.personal
+    display: flex
+    border: 1px solid #E4E4E4
+    padding: 0
+    margin: 0 auto
+    max-width: 936px
+    +mq($max-width: 767px)
+        
+
+    &__wrapper
+        width: 100%
+        padding: 50px 0
+        +mq($max-width: 767px)
+            padding: 50px 15px
+        // +mq($max-width: 575px)
+        // padding: 30px 0
+
+    &__box
+        &:first-child
+            max-width: 610px
+            width: 100%
+            border-right: 1px solid #E4E4E4
+
+            +mq($max-width: 767px)
+                max-width: unset
+
+            svg
+                height: 33px
+                width: 33px
+                
+
+                &:last-child
+                    margin-left: 20px
+                    flex: 0 0 33px
+
+            .personal__edit
+                padding: 0
+                height: unset
+                border: none
+
+        &:last-child
+            width: 327px
+
+            +mq($max-width: 767px)
+                width: auto
+
+    &__table
+        padding: 0 0 22px 0
+        display: flex
+        flex-flow: wrap
+
+        
+
+    &__heading
+        display: flex
+        align-items: center
+        padding: 0 20px 0 40px
+        height: 53px
+        background-color: #EFF3F9
+        font-style: normal
+        font-weight: 500
+        font-size: 21px
+        line-height: 25px
+        width: 100%
+        color: #000000
+
+        +mq($max-width: 767px)
+            font-size: 16px
+            padding: 10px 20px
+            height: unset
+
+        span
+            color: $green
+            margin-left: 10px
+
+    &__row
+        display: flex
+        align-items: center
+        background-color: #fff
+        height: 53px
+
+        +mq($max-width: 767px)
+            flex-flow: wrap
+            height: unset
+        a
+            text-decoration: underline
+
+    &__cell
+        padding: 0 40px
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 22px
+
+        color: #000000
+
+        +mq($max-width: 767px)
+            padding: 10px 20px
+            font-size: 16px
+
+    &__options
+        display: flex
+        align-items: center
+        justify-content: center
+        flex: 1
+        padding: 22px 0 0 0
+
+        
+
+    &__caption
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 22px
+
+        color: #000000
+        flex: 0 0 auto
+        width: calc(100% - 75px)
+        margin-left: 30px
+
+        +mq($max-width: 767px)
+            display: none
+
+    &__add
+
+        display: flex
+        align-items: center
+        height: 110px
+        padding: 0 20px
+        border: 1px solid #EEEEEE;
+
+        +mq($max-width: 767px)
+            height: unset
+            padding: 10px
+
+
+        svg
+            height: 44px
+            width: 44px
+            flex: 0 0 44px
+    &__edit
+
+        display: flex
+        align-items: center
+        height: 110px
+        padding: 0 20px
+        border: 1px solid #EEEEEE
+
+        +mq($max-width: 767px)
+            height: unset
+            padding: 10px
+
+
+        svg
+            height: 44px
+            width: 44px
+            flex: 0 0 44px
+            
