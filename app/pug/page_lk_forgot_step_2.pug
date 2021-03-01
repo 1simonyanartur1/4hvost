@@ -1,0 +1,23 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		
+
+		main.page-container
+			+breadcrumbs('Личный кабинет','Мои личные данные')
+			section.section.section_banner
+				+return()
+				.section__block
+					+title('Успешно','title_center','h1')
+					+title('Ссылка для  восстановления пароля <a href="/">выслана на указанную электронную почту</a>','title_subtitle','','','','','h3')
+					+title('Вернуться на страницу авторизации','title_subtitle title_link','','','','','h3')
+				
+
+		include blocks/footer.pug
+		include blocks/scripts.pug
