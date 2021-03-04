@@ -1,143 +1,209 @@
-mixin feedback(reviews,thanks,forgot,change,pass,personal)
-    if reviews
-        .feedback
-            +title('Покупали данную продукцию?','','','','','form')
-            .feedback__subtitle Оставьте своё мнение
-            form(action="/").feedback__form
-                label.feedback__label.feedback__label_name
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#user")
-                    input(type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off").feedback__input
-                <textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
-                .feedback__questions Сколько звёзд вы бы порекомендовали?
-                input(type="hidden" name="stars" value)
-                +stars('','','','empty')
-                +button('Отправить','button_submit','submit')
-                .feedback__consent Я прочитал(а) и даю согласие на обработку своих персональных данных.
-    else if thanks 
-        .feedback
-            +title('Сообщение отправлено','','','','','form')
-    else if forgot 
-        .feedback
-            +title('Забыли пароль?','title_center','h1','','','')
-            .feedback__subtitle Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку <a href="">«Восстановить»</a>, чтобы получить пароль по электронной почте.
+mixin feedback(reviews,thanks,forgot,change,pass,personal,registration)
+	if reviews
+		.feedback
+			+title('Покупали данную продукцию?','','','','','form')
+			.feedback__subtitle Оставьте своё мнение
+			form(action="/").feedback__form
+				label.feedback__label.feedback__label_name
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#user")
+					input(type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off").feedback__input
+				<textarea class="feedback__textarea" placeholder="Текст отзыва" name="feedback__textarea"></textarea>
+				.feedback__questions Сколько звёзд вы бы порекомендовали?
+				input(type="hidden" name="stars" value)
+				+stars('','','','empty')
+				+button('Отправить','button_submit','submit')
+				.feedback__consent Я прочитал(а) и даю согласие на обработку своих персональных данных.
+	else if thanks 
+		.feedback
+			+title('Сообщение отправлено','','','','','form')
+	else if forgot 
+		.feedback
+			+title('Забыли пароль?','title_center','h1','','','')
+			.feedback__subtitle Введите адрес электронной почты Вашей учетной записи. Нажмите кнопку <a href="">«Восстановить»</a>, чтобы получить пароль по электронной почте.
 
-            form(action="/").feedback__form
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#email")
-                    input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
-                
-                +button('Восстановить','button_submit','submit')
+			form(action="/").feedback__form
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#email")
+					input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+				
+				+button('Восстановить','button_submit','submit')
 
 
-    else if change 
-        .feedback
-            +title('Изменение контактной информации','title_center','h1','','','')
-            
-            form(action="/").feedback__form
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#email")
-                    input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#user")
-                    input(type="text" placeholder="Ваш E-mail" name="feedback__name" autocomplete="off").feedback__input
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#tel")
-                    input(type="text" placeholder="Ваш E-mail" name="feedback__phone" autocomplete="off").feedback__input
-                
-                +button('Восстановить','button_submit','submit')
-    else if pass 
-        .feedback
-            +title('Изменение пароля','title_center','h1','','','')
-            
-            form(action="/").feedback__form
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#pass")
-                    input(type="text" placeholder="Новый пароль" name="feedback__pass_new" autocomplete="off").feedback__input
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#pass")
-                    input(type="text" placeholder="Подтвердите пароль" name="feedback__pass_new" autocomplete="off").feedback__input
-                
-                
-                +button('Изменить пароль','button_submit','submit')
-    else if pass 
-        .feedback
-            +title('Изменение пароля','title_center','h1','','','')
-            
-            form(action="/").feedback__form
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#pass")
-                    input(type="text" placeholder="Новый пароль" name="feedback__pass_new" autocomplete="off").feedback__input
-                label.feedback__label
-                    svg.stars__icon
-                            use(xlink:href="/img/sprite_form.svg#pass")
-                    input(type="text" placeholder="Подтвердите пароль" name="feedback__pass_new" autocomplete="off").feedback__input
-                
-                
-                +button('Изменить пароль','button_submit','submit')
-                
-    else if personal 
-        .feedback.feedback_grid
-            +title('Редактирование личной информации','title_center','h1','','','')
-            
-            form(action="/").feedback__form.feedback__form_grid
-                .feedback__heading Личные данные
-                .feedback__fieldset
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#user")
-                        input(type="text" placeholder="Фамилия" name="feedback__surname" autocomplete="off").feedback__input
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#tel")
-                        input(type="text" placeholder="Телефон" name="feedback__phone" autocomplete="off").feedback__input
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#user")
-                        input(type="text" placeholder="Имя" name="feedback__name" autocomplete="off").feedback__input
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#email")
-                        input(type="text" placeholder="E-mail" name="feedback__email" autocomplete="off").feedback__input
-                
-                .feedback__heading Адрес
-                .feedback__fieldset
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#city")
-                        input(type="text" placeholder="Город" name="feedback__city" autocomplete="off").feedback__input
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#index")
-                        input(type="text" placeholder="Индекс" name="feedback__index" autocomplete="off").feedback__input
-                    label.feedback__label
-                        svg.stars__icon
-                                use(xlink:href="/img/sprite_form.svg#geo")
-                        input(type="text" placeholder="Адрес" name="feedback__address" autocomplete="off").feedback__input
-                
-                .feedback__fieldset 
-                    .feedback__heading Хотите быть в курсе новых скидок, новостей и т.д?
-                    .feedback__subscribe 
-                        input.feedback__radio#radio_6(type="radio" name="group_2" checked)
-                        label.feedback__caption(for="radio_6") Конечно!
-                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
-                                <rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
-                            </svg>
-                    
-                        input.feedback__radio#radio_7(type="radio" name="group_2")
-                        label.feedback__caption(for="radio_7") Не хочу
-                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
-                                <rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
-                            </svg>
-                
-                +button('Сохранить изменения','button_submit','submit')
-                
+	else if change 
+		.feedback
+			+title('Изменение контактной информации','title_center','h1','','','')
+			
+			form(action="/").feedback__form
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#email")
+					input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#user")
+					input(type="text" placeholder="Ваш E-mail" name="feedback__name" autocomplete="off").feedback__input
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#tel")
+					input(type="text" placeholder="Ваш E-mail" name="feedback__phone" autocomplete="off").feedback__input
+				
+				+button('Восстановить','button_submit','submit')
+	else if pass 
+		.feedback
+			+title('Изменение пароля','title_center','h1','','','')
+			
+			form(action="/").feedback__form
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#pass")
+					input(type="text" placeholder="Новый пароль" name="feedback__pass_new" autocomplete="off").feedback__input
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#pass")
+					input(type="text" placeholder="Подтвердите пароль" name="feedback__pass_new" autocomplete="off").feedback__input
+				
+				
+				+button('Изменить пароль','button_submit','submit')
+	else if pass 
+		.feedback
+			+title('Изменение пароля','title_center','h1','','','')
+			
+			form(action="/").feedback__form
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#pass")
+					input(type="text" placeholder="Новый пароль" name="feedback__pass_new" autocomplete="off").feedback__input
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#pass")
+					input(type="text" placeholder="Подтвердите пароль" name="feedback__pass_confirm" autocomplete="off").feedback__input
+				
+				
+				+button('Изменить пароль','button_submit','submit')
+				
+	else if personal 
+		.feedback.feedback_grid
+			+title('Редактирование личной информации','title_center','h1','','','')
+			
+			form(action="/").feedback__form.feedback__form_grid
+				.feedback__heading Личные данные
+				.feedback__fieldset
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#user")
+						input(type="text" placeholder="Фамилия" name="feedback__surname" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#tel")
+						input(type="text" placeholder="Телефон" name="feedback__phone" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#user")
+						input(type="text" placeholder="Имя" name="feedback__name" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#email")
+						input(type="text" placeholder="E-mail" name="feedback__email" autocomplete="off").feedback__input
+				
+				.feedback__heading Адрес
+				.feedback__fieldset
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#city")
+						input(type="text" placeholder="Город" name="feedback__city" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#index")
+						input(type="text" placeholder="Индекс" name="feedback__index" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#geo")
+						input(type="text" placeholder="Адрес" name="feedback__address" autocomplete="off").feedback__input
+				
+				.feedback__fieldset 
+					.feedback__heading Хотите быть в курсе новых скидок, новостей и т.д?
+					.feedback__subscribe 
+						input.feedback__radio#radio_6(type="radio" name="group_2" checked)
+						label.feedback__caption(for="radio_6") Конечно!
+							<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+								<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+							</svg>
+					
+						input.feedback__radio#radio_7(type="radio" name="group_2")
+						label.feedback__caption(for="radio_7") Не хочу
+							<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+								<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+							</svg>
+				
+				+button('Сохранить изменения','button_submit','submit')
+				
+	else if registration 
+		.feedback.feedback_registration
+			img.feedback__image(src=img+"form_cat.png", alt="")
+			+title('Регистрация займёт не более 1 минуты','title_center','h1','','','')
+			.feedback__subtitle Если Вы уже зарегистрированы, перейдите на страницу <a href="/">входа в систему</a>.
+
+			form(action="/").feedback__form.feedback__form_registration
+				
+				
+				.feedback__box
+					.feedback__heading Основная информация
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#name")
+						input(type="text" placeholder="Как вас зовут?" name="feedback__name" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#tel")
+						input(type="text" placeholder="Телефон" name="feedback__phone" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#pass")
+						input(type="text" placeholder="Подтвердите пароль" name="feedback__pass_confirm" autocomplete="off").feedback__input
+				.feedback__box
+					.feedback__heading
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#email")
+						input(type="text" placeholder="E-mail" name="feedback__email" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#pass")
+						input(type="text" placeholder="Пароль" name="feedback__pass" autocomplete="off").feedback__input
+
+					.feedback__block
+						.feedback__heading Хотите быть в курсе новых скидок, новостей и т.д?
+						.feedback__subscribe 
+							input.feedback__radio#radio_6(type="radio" name="group_2" checked)
+							label.feedback__caption(for="radio_6") Конечно!
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+						
+							input.feedback__radio#radio_7(type="radio" name="group_2")
+							label.feedback__caption(for="radio_7") Не хочу
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+
+				
+				
+				.feedback__box
+					.feedback__heading Ваш адрес
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#city")
+						input(type="text" placeholder="Город" name="feedback__city" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#geo")
+						input(type="text" placeholder="Адрес" name="feedback__address" autocomplete="off").feedback__input
+				   
+					+button('Сохранить изменения','button_submit','submit')
+				

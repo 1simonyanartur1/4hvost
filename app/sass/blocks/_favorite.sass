@@ -1,74 +1,117 @@
 .favorite
 
-    &__inner
-        padding: 0
-        margin: 0 auto
-        max-width: 1560px
-        +mq($max-width: 1650px)
-            padding: 0 15px
-            max-width: 100%
-        +mq($max-width: 1200px)
-            padding: 0 15px
-            max-width: 100%
-        +mq($max-width: 1024px)
-            grid-template-columns: 1fr
-        +mq($max-width: 575px)
-            padding: 0 10px
+	&__inner
+		padding: 0
+		margin: 0 auto
+		max-width: 1560px
+		+mq($max-width: 1650px)
+			padding: 0 15px
+			max-width: 100%
+		+mq($max-width: 1200px)
+			padding: 0 15px
+			max-width: 100%
+		+mq($max-width: 1024px)
+			grid-template-columns: 1fr
+		+mq($max-width: 575px)
+			padding: 0 10px
 
-    &__title
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        line-height: 22px
-        color: #02A950
+	&__title
+		font-style: normal
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: #02A950
 
-    &__table
+		span
+			color: black
 
-        padding: 100px 0 50px
-        table
-            width: 100%
-            border-collapse: collapse
-
-        tr
-            &:not(:first-child)
-                border-bottom: 1px solid #D2D2D2;
+	&__table
+		overflow-x: auto
+		padding: 100px 0 50px
 
 
-        th
-            font-style: normal
-            font-weight: 600
-            font-size: 18px
-            line-height: 22px
-            color: #02A950
-            padding: 0 5px
+		
 
-        td
-            font-style: normal
-            font-weight: normal
-            font-size: 16px
-            line-height: 19px
-            text-align: center
-            color: #000000
-            padding: 30px 5px
+		table
+			width: 100%
+			border-collapse: collapse
+			min-width: 767px
 
 
-    &__options
-        display: flex
-        justify-content: center
-
-    &__action
-        display: flex
-        flex-direction: row-reverse
-        justify-content: flex-end
-        align-items: center
-        
-        
-        svg
-            margin-right: 10px
+		tr
+			&:not(:first-child)
+				border-bottom: 1px solid #D2D2D2;
 
 
-        &_delete
-            margin-left: 10px
+		th
+			font-style: normal
+			font-weight: 600
+			font-size: 18px
+			line-height: 22px
+			color: #02A950
+			padding: 0 5px
 
-    &__image
-        padding: 0 0 0 50px
+		td
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 19px
+			text-align: center
+			color: #000000
+			padding: 30px 5px
+
+
+		&_history
+			tr
+				&:nth-child(even)
+					background-color: #EFF3F9
+			th
+				padding: 20px 5px
+
+			td
+				padding: 20px 5px
+				&:last-child
+					border-left: 1px solid #D2D2D2
+
+		&_finance
+			tr
+				&:nth-child(even)
+					background-color: #EFF3F9
+			th
+				padding: 20px 5px
+				ta
+
+			td
+				padding: 20px 5px
+				ta
+				
+
+	&__options
+		display: flex
+		justify-content: center
+
+	&__action
+		display: flex
+		flex-direction: row-reverse
+		justify-content: flex-end
+		align-items: center
+
+		&_repeat
+
+			&:hover
+				svg
+					path
+						fill: white
+					circle
+						fill: $green
+		
+		
+		svg
+			margin-right: 10px
+
+
+		&_delete
+			margin-left: 10px
+
+	&__image
+		padding: 0 0 0 50px
