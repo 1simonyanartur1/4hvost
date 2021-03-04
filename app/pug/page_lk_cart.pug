@@ -1,0 +1,22 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		
+
+		main.page-container
+			+breadcrumbs('Личный кабинет','Моя корзина')
+			section.section.section_banner
+				+return()
+				+title('Моя корзина','title_center','h1')
+				+favorite('','','','cart')
+				
+				
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

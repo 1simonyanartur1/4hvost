@@ -1,4 +1,4 @@
-mixin favorite(favorite,history,finance)
+mixin favorite(favorite,history,finance,cart)
     if favorite
         .favorite
             .favorite__inner
@@ -24,7 +24,7 @@ mixin favorite(favorite,history,finance)
                             td 
                             
                                 .favorite__options
-                                    a(href="/").favorite__action.favorite__action_add В корзину
+                                    .favorite__action.favorite__action_add В корзину
                                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="22.9006" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
                                         <path d="M19.1346 28.1099C17.643 28.1099 16.4297 29.3232 16.4297 30.8148C16.4297 32.3064 17.643 33.5197 19.1346 33.5197C20.6262 33.5197 21.8396 32.3064 21.8396 30.8148C21.8396 29.3232 20.6262 28.1099 19.1346 28.1099ZM19.1346 31.974C18.4955 31.974 17.9754 31.4539 17.9754 30.8148C17.9754 30.1756 18.4955 29.6555 19.1346 29.6555C19.774 29.6555 20.2939 30.1756 20.2939 30.8148C20.2939 31.4539 19.7738 31.974 19.1346 31.974Z" fill="#02A950"/>
@@ -35,7 +35,7 @@ mixin favorite(favorite,history,finance)
                                         <path d="M25.6277 17.4697H22.4076C21.9808 17.4697 21.6348 17.8157 21.6348 18.2426C21.6348 18.6694 21.9808 19.0154 22.4076 19.0154H25.6277C26.0546 19.0154 26.4006 18.6694 26.4006 18.2426C26.4006 17.8157 26.0546 17.4697 25.6277 17.4697Z" fill="#02A950"/>
                                         </svg>
 
-                                    a(href="/").favorite__action.favorite__action_delete Удалить
+                                    .favorite__action.favorite__action_delete Удалить
                                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="22.8752" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
                                         <path d="M20.8426 19.4484C21.4044 19.4484 21.8598 19.9038 21.8598 20.4656V27.0776C21.8598 27.6394 21.4044 28.0948 20.8426 28.0948C20.2808 28.0948 19.8253 27.6394 19.8253 27.0776V20.4656C19.8253 19.9038 20.2808 19.4484 20.8426 19.4484Z" fill="#3D3D3D"/>
@@ -54,7 +54,7 @@ mixin favorite(favorite,history,finance)
                             td 
                             
                                 .favorite__options
-                                    a(href="/").favorite__action.favorite__action_add В корзину
+                                    .favorite__action.favorite__action_add В корзину
                                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="22.9006" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
                                         <path d="M19.1346 28.1099C17.643 28.1099 16.4297 29.3232 16.4297 30.8148C16.4297 32.3064 17.643 33.5197 19.1346 33.5197C20.6262 33.5197 21.8396 32.3064 21.8396 30.8148C21.8396 29.3232 20.6262 28.1099 19.1346 28.1099ZM19.1346 31.974C18.4955 31.974 17.9754 31.4539 17.9754 30.8148C17.9754 30.1756 18.4955 29.6555 19.1346 29.6555C19.774 29.6555 20.2939 30.1756 20.2939 30.8148C20.2939 31.4539 19.7738 31.974 19.1346 31.974Z" fill="#02A950"/>
@@ -65,7 +65,7 @@ mixin favorite(favorite,history,finance)
                                         <path d="M25.6277 17.4697H22.4076C21.9808 17.4697 21.6348 17.8157 21.6348 18.2426C21.6348 18.6694 21.9808 19.0154 22.4076 19.0154H25.6277C26.0546 19.0154 26.4006 18.6694 26.4006 18.2426C26.4006 17.8157 26.0546 17.4697 25.6277 17.4697Z" fill="#02A950"/>
                                         </svg>
 
-                                    a(href="/").favorite__action.favorite__action_delete Удалить
+                                    .favorite__action.favorite__action_delete Удалить
                                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="22.8752" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
                                         <path d="M20.8426 19.4484C21.4044 19.4484 21.8598 19.9038 21.8598 20.4656V27.0776C21.8598 27.6394 21.4044 28.0948 20.8426 28.0948C20.2808 28.0948 19.8253 27.6394 19.8253 27.0776V20.4656C19.8253 19.9038 20.2808 19.4484 20.8426 19.4484Z" fill="#3D3D3D"/>
@@ -206,6 +206,141 @@ mixin favorite(favorite,history,finance)
                             td 20.01.2021
                             td Значимость этих проблем настолько очевидна, что постоянное информационно-п
                             td 2 400 ₽
+                            
+                                    
+    else if cart
+        .favorite
+            .favorite__inner
+                
+                .favorite__table
+                    table
+                        tr
+                             
+                            th 
+                            th Наименование
+                            th Модель
+                            th Количество
+                            th Доступно
+                            th Цена
+                            th Итого
+                            th Действие
+
+                        tr
+                            td 
+                                .favorite__image
+                                    img(src=img+"favorite.png", alt="")
+                                
+                            td ACANA SINGLES Утка корм д/собак 340 гр. (61233)
+                            td П2020
+                            td 
+                                .favorite__options.favorite__options_count
+                                    .favorite__action.favorite__action_minus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5451" cy="22.6145" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M25.8449 23.5743H18.4449V21.4943H25.8449V23.5743Z" fill="black"/>
+                                        </svg>
+
+                                    .favorite__count 2
+                                    .favorite__action.favorite__action_plus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.4553" cy="22.6145" r="21.2837" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M23.4751 22.1294H26.8551V24.1694H23.4751V27.5494H21.4351V24.1694H18.0551V22.1294H21.4351V18.7494H23.4751V22.1294Z" fill="black"/>
+                                        </svg>
+
+                            td 200
+                            td 700.00 ₽
+                            td 1400.00 ₽
+                            td 
+                            
+                                .favorite__options
+                                   
+
+                                    .favorite__action.favorite__action_delete Удалить
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.8752" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M20.8426 19.4484C21.4044 19.4484 21.8598 19.9038 21.8598 20.4656V27.0776C21.8598 27.6394 21.4044 28.0948 20.8426 28.0948C20.2808 28.0948 19.8253 27.6394 19.8253 27.0776V20.4656C19.8253 19.9038 20.2808 19.4484 20.8426 19.4484Z" fill="#3D3D3D"/>
+                                        <path d="M25.9287 20.4656C25.9287 19.9038 25.4733 19.4484 24.9115 19.4484C24.3497 19.4484 23.8943 19.9038 23.8943 20.4656V27.0776C23.8943 27.6394 24.3497 28.0948 24.9115 28.0948C25.4733 28.0948 25.9287 27.6394 25.9287 27.0776V20.4656Z" fill="#3D3D3D"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4809 11.3105C20.1095 11.3105 19.7675 11.5131 19.5889 11.8388L18.2057 14.3622H12.7047C12.1429 14.3622 11.6875 14.8177 11.6875 15.3795C11.6875 15.9413 12.1429 16.3967 12.7047 16.3967H14.2306V32.6724C14.2306 33.2342 14.686 33.6896 15.2478 33.6896H30.5062C31.068 33.6896 31.5235 33.2342 31.5235 32.6724V16.3967H33.0493C33.6111 16.3967 34.0665 15.9413 34.0665 15.3795C34.0665 14.8177 33.6111 14.3622 33.0493 14.3622H27.5542L26.2029 11.8464C26.0256 11.5164 25.6813 11.3105 25.3067 11.3105H20.4809ZM25.2448 14.3622L24.6984 13.345H21.0834L20.5258 14.3622H25.2448ZM16.265 16.3967V31.6551H29.489V16.3967H16.265Z" fill="#3D3D3D"/>
+                                        </svg>
+                        tr
+                            td 
+                                .favorite__image
+                                    img(src=img+"favorite.png", alt="")
+                                
+                            td ACANA SINGLES Утка корм д/собак 340 гр. (61233)
+                            td П2020
+                            td 
+                                .favorite__options.favorite__options_count
+                                    .favorite__action.favorite__action_minus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5451" cy="22.6145" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M25.8449 23.5743H18.4449V21.4943H25.8449V23.5743Z" fill="black"/>
+                                        </svg>
+
+                                    .favorite__count 2
+                                    .favorite__action.favorite__action_plus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.4553" cy="22.6145" r="21.2837" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M23.4751 22.1294H26.8551V24.1694H23.4751V27.5494H21.4351V24.1694H18.0551V22.1294H21.4351V18.7494H23.4751V22.1294Z" fill="black"/>
+                                        </svg>
+
+                            td 200
+                            td 700.00 ₽
+                            td 1400.00 ₽
+                            td 
+                            
+                                .favorite__options
+                                   
+
+                                    .favorite__action.favorite__action_delete Удалить
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.8752" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M20.8426 19.4484C21.4044 19.4484 21.8598 19.9038 21.8598 20.4656V27.0776C21.8598 27.6394 21.4044 28.0948 20.8426 28.0948C20.2808 28.0948 19.8253 27.6394 19.8253 27.0776V20.4656C19.8253 19.9038 20.2808 19.4484 20.8426 19.4484Z" fill="#3D3D3D"/>
+                                        <path d="M25.9287 20.4656C25.9287 19.9038 25.4733 19.4484 24.9115 19.4484C24.3497 19.4484 23.8943 19.9038 23.8943 20.4656V27.0776C23.8943 27.6394 24.3497 28.0948 24.9115 28.0948C25.4733 28.0948 25.9287 27.6394 25.9287 27.0776V20.4656Z" fill="#3D3D3D"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4809 11.3105C20.1095 11.3105 19.7675 11.5131 19.5889 11.8388L18.2057 14.3622H12.7047C12.1429 14.3622 11.6875 14.8177 11.6875 15.3795C11.6875 15.9413 12.1429 16.3967 12.7047 16.3967H14.2306V32.6724C14.2306 33.2342 14.686 33.6896 15.2478 33.6896H30.5062C31.068 33.6896 31.5235 33.2342 31.5235 32.6724V16.3967H33.0493C33.6111 16.3967 34.0665 15.9413 34.0665 15.3795C34.0665 14.8177 33.6111 14.3622 33.0493 14.3622H27.5542L26.2029 11.8464C26.0256 11.5164 25.6813 11.3105 25.3067 11.3105H20.4809ZM25.2448 14.3622L24.6984 13.345H21.0834L20.5258 14.3622H25.2448ZM16.265 16.3967V31.6551H29.489V16.3967H16.265Z" fill="#3D3D3D"/>
+                                        </svg>
+                        tr
+                            td 
+                                .favorite__image
+                                    img(src=img+"favorite.png", alt="")
+                                
+                            td ACANA SINGLES Утка корм д/собак 340 гр. (61233)
+                            td П2020
+                            td 
+                                .favorite__options.favorite__options_count
+                                    .favorite__action.favorite__action_minus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5451" cy="22.6145" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M25.8449 23.5743H18.4449V21.4943H25.8449V23.5743Z" fill="black"/>
+                                        </svg>
+
+                                    .favorite__count 2
+                                    .favorite__action.favorite__action_plus
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.4553" cy="22.6145" r="21.2837" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M23.4751 22.1294H26.8551V24.1694H23.4751V27.5494H21.4351V24.1694H18.0551V22.1294H21.4351V18.7494H23.4751V22.1294Z" fill="black"/>
+                                        </svg>
+
+                            td 200
+                            td 700.00 ₽
+                            td 1400.00 ₽
+                            td 
+                            
+                                .favorite__options
+                                   
+
+                                    .favorite__action.favorite__action_delete Удалить
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.8752" cy="22.5002" r="21.2837" fill="white" stroke="#DCDCDC" stroke-width="1.38224"/>
+                                        <path d="M20.8426 19.4484C21.4044 19.4484 21.8598 19.9038 21.8598 20.4656V27.0776C21.8598 27.6394 21.4044 28.0948 20.8426 28.0948C20.2808 28.0948 19.8253 27.6394 19.8253 27.0776V20.4656C19.8253 19.9038 20.2808 19.4484 20.8426 19.4484Z" fill="#3D3D3D"/>
+                                        <path d="M25.9287 20.4656C25.9287 19.9038 25.4733 19.4484 24.9115 19.4484C24.3497 19.4484 23.8943 19.9038 23.8943 20.4656V27.0776C23.8943 27.6394 24.3497 28.0948 24.9115 28.0948C25.4733 28.0948 25.9287 27.6394 25.9287 27.0776V20.4656Z" fill="#3D3D3D"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4809 11.3105C20.1095 11.3105 19.7675 11.5131 19.5889 11.8388L18.2057 14.3622H12.7047C12.1429 14.3622 11.6875 14.8177 11.6875 15.3795C11.6875 15.9413 12.1429 16.3967 12.7047 16.3967H14.2306V32.6724C14.2306 33.2342 14.686 33.6896 15.2478 33.6896H30.5062C31.068 33.6896 31.5235 33.2342 31.5235 32.6724V16.3967H33.0493C33.6111 16.3967 34.0665 15.9413 34.0665 15.3795C34.0665 14.8177 33.6111 14.3622 33.0493 14.3622H27.5542L26.2029 11.8464C26.0256 11.5164 25.6813 11.3105 25.3067 11.3105H20.4809ZM25.2448 14.3622L24.6984 13.345H21.0834L20.5258 14.3622H25.2448ZM16.265 16.3967V31.6551H29.489V16.3967H16.265Z" fill="#3D3D3D"/>
+                                        </svg>
+                .favorite__buttons 
+                    +button('Продолжить покупки','button_transparent button_submit','','/')
+                    .favorite__total Общая сумма: <span>4 500 ₽</span>
+                    +button('Оформить заказ','button_green button_submit','','/')
+                        
                             
                                     
 
