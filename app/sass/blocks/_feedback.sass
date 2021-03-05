@@ -29,6 +29,26 @@
 				width: 100%
 				max-width: unset
 
+	&_reclamation
+		border: 1px solid #EBEBEB
+		.feedback__textarea
+			height: 150px
+			+mq($max-width: 575px)
+				margin-bottom: 20px
+
+		.feedback__fieldset
+			&:last-of-type
+
+				padding: 0
+
+	&_entry
+		border: 1px solid #EBEBEB
+		padding: 40px
+		min-width: none
+		max-width: 500px
+
+		+mq($max-width: 575px)
+			padding: 20px 10px
 
 	&__image
 		position: absolute
@@ -100,13 +120,13 @@
 				grid-gap: 0
 				grid-template-columns: 1fr
 
-	
-
 	&__fieldset
 		display: grid
 		grid-template-columns: 1fr 1fr
 		width: 100%
 		grid-gap: 0 30px
+
+		align-items: start
 
 		+mq($max-width: 575px)
 			grid-template-columns: 1fr
@@ -115,6 +135,10 @@
 		&:last-of-type
 			padding: 0 0 30px 0
 
+		&_rows
+			grid-template-rows: 85px 85px 85px 85px
+			+mq($max-width: 575px)
+				grid-template-rows: auto
 
 	&__box
 		display: grid
@@ -169,20 +193,44 @@
 		text-align: center
 		max-width: 310px
 		padding: 20px 0 0 0
+		color: black
 
+		a
+			color: black
+			text-decoration: underline
 
+	&__forgot
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 19px
+		text-decoration-line: underline
+		color: #666666
+		text-align: right
+		display: block
+		width: 100%
+		margin-bottom: 35px
+
+	&__question
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 22px
+		color: #000000
+		margin-top: 40px
+
+		a
+			color: $green
+			text-decoration: underline
 
 	&__subscribe
 		display: flex
-		
-
-
 
 	&__radio:checked
 		display: none
 
 	&__caption
-		
+
 		&:not(:last-of-type)
 			margin-right: 30px
 
@@ -205,9 +253,9 @@
 
 		+mq($max-width: 1023px)
 			flex: 0 0 23px
-			
+
 		rect:first-child
-			stroke:  $green
+			stroke: $green
 
 		rect:last-child
 			fill: $green
@@ -234,3 +282,15 @@
 
 		rect:last-child
 			fill: transparent
+
+	&__consent
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 17px
+		text-align: center
+		color: #000000
+		text-align: center
+		// display: flex
+		// align-items: center
+		text-align: center

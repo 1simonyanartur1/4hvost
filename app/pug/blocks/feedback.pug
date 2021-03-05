@@ -1,4 +1,4 @@
-mixin feedback(reviews,thanks,forgot,change,pass,personal,registration)
+mixin feedback(reviews,thanks,forgot,change,pass,personal,registration,reclamation,entry)
 	if reviews
 		.feedback
 			+title('Покупали данную продукцию?','','','','','form')
@@ -50,6 +50,25 @@ mixin feedback(reviews,thanks,forgot,change,pass,personal,registration)
 					input(type="text" placeholder="Ваш E-mail" name="feedback__phone" autocomplete="off").feedback__input
 				
 				+button('Восстановить','button_submit','submit')
+	else if entry 
+		.feedback.feedback_entry
+			+title('Вход в личный кабинет','title_center','h1','','','')
+			
+			form(action="/").feedback__form
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#email")
+					input(type="text" placeholder="Ваш E-mail" name="feedback__email" autocomplete="off").feedback__input
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#pass")
+					input(type="text" placeholder="Пароль" name="feedback__name" autocomplete="off").feedback__input
+				
+				a(href="/").feedback__forgot Забыли пароль?
+				
+				+button('Войти','button_submit','submit')
+				.feedback__consent Нажимая на кнопку, вы даете согласие на обработку своих <a href="/">персональных данных</a>
+				.feedback__question Нет аккаунта? <a href="/">Создайте прямо сейчас!</a>
 	else if pass 
 		.feedback
 			+title('Изменение пароля','title_center','h1','','','')
@@ -206,4 +225,43 @@ mixin feedback(reviews,thanks,forgot,change,pass,personal,registration)
 						input(type="text" placeholder="Адрес" name="feedback__address" autocomplete="off").feedback__input
 				   
 					+button('Сохранить изменения','button_submit','submit')
+
+	else if reclamation 
+		.feedback.feedback_grid.feedback_reclamation
+			
+			
+			form(action="/").feedback__form.feedback__form_grid
+				.feedback__fieldset.feedback__fieldset_rows
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#user")
+						input(type="text" placeholder="Фамилия" name="feedback__surname" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#tel")
+						input(type="text" placeholder="Телефон" name="feedback__phone" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#user")
+						input(type="text" placeholder="Имя" name="feedback__name" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#email")
+						input(type="text" placeholder="E-mail" name="feedback__email" autocomplete="off").feedback__input
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#tel")
+						input(type="text" placeholder="Телефон" name="feedback__phone" autocomplete="off").feedback__input
+					textarea.feedback__textarea 
+					label.feedback__label
+						svg.stars__icon
+								use(xlink:href="/img/sprite_form.svg#email")
+						input(type="text" placeholder="E-mail" name="feedback__email" autocomplete="off").feedback__input
+				
+				
+				
+				.feedback__fieldset 
+					.feedback__consent Я прочитал и даю согласие на обработку своих персональных данных. 
+				
+					+button('Отправить','button_submit','submit')
 				

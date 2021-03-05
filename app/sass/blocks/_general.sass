@@ -85,9 +85,6 @@ body
 	align-self: stretch
 	height: 100%
 
-
-
-
 .section
 	&__inner
 		padding: 0
@@ -107,11 +104,27 @@ body
 			display: grid
 			grid-template-columns: 270px 1fr
 			grid-gap: 65px
-			padding-bottom: 100px;
+			padding-bottom: 100px
 			+mq($max-width: 1023px)
 				grid-template-columns: 1fr
 				position: relative
 				padding-bottom: 30px
+
+		&_half
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-gap: 30px
+			padding-bottom: 100px
+			+mq($max-width: 1650px)
+				padding-bottom: 100px
+			+mq($max-width: 1200px)
+				padding-bottom: 100px
+		
+			+mq($max-width: 1024px)
+				grid-template-columns: 1fr
+			+mq($max-width: 575px)
+				
+				padding-bottom: 50px
 
 	&__box
 		&_goods
@@ -119,7 +132,19 @@ body
 			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
 			grid-gap: 80px 0
 
-			
+		&_text
+			padding: 50px 0
+
+			+mq($max-width: 575px)
+				padding: 0
+			p
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 215.5%
+
+				color: #000000
+
 	&__block
 		height: 500px
 		display: flex
@@ -135,17 +160,13 @@ body
 			flex: unset
 
 	&__sidebar
-		
-		
+
 		+mq($max-width: 1023px)
 			width: 260px
 
-			padding-right: 40px;
+			padding-right: 40px
 			position: absolute
 			z-index: 100
 			height: 100%
-			
-			left: - 220px
-			
-			
 
+			left: - 220px
