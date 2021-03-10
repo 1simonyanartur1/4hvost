@@ -1,0 +1,78 @@
+mixin ordering()
+	.ordering
+		.ordering__inner
+			form(action="/").ordering__form
+				.ordering__box
+					.ordering__title Данные покупателя *
+					label.ordering__label Имя 
+						input(type="text").ordering__input 
+					label.ordering__label Город
+						input(type="text").ordering__input 
+					label.ordering__label Телефон
+						input(type="text").ordering__input 
+					label.ordering__label Адрес
+						input(type="text").ordering__input 
+					
+					label.ordering__label.ordering__label_full Выберите адрес
+					select.ordering__select.ordering__select_address 
+						option.ordering__option г.Самара ул.Независимости 98
+						option.ordering__option г.Самара ул.Независимости 52
+						option.ordering__option г.Самара ул.Независимости 33
+
+					textarea.ordering__textarea(placeholder="Комментарий к заказу (Необязательно)")
+
+				.ordering__box 
+					.ordering__title Способ доставки *
+					.ordering__delivery 
+						.ordering__options
+							
+							input.ordering__radio#radio_1(type="radio" name="group_delivery" checked value="ordering__select_office")
+							label.ordering__caption(for="radio_1") Самовывоз из магазина
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+						
+							input.ordering__radio#radio_2(type="radio" name="group_delivery" value="ordering__select_delivery")
+							label.ordering__caption(for="radio_2") Доставка
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+						
+						select.ordering__select.ordering__select_office 
+							option.ordering__option ул.Куйбышева, 71
+							option.ordering__option ул.Победы, 10
+							option.ordering__option ул.Ташкентская, 90
+							option.ordering__option ул.Солнечная, 36а
+							option.ordering__option ул.Фрунзе, 87/89
+							option.ordering__option ул.Димитрова, 93
+
+						select.ordering__select.ordering__select_delivery 
+							option.ordering__option По городу +0 ₽ 
+							option.ordering__option Зубчаниновка, Запанской, Юнгородок, Студеный Овраг +50 ₽
+							option.ordering__option Сухая Самарка, Мехзавод +150 ₽
+							option.ordering__option Управленческий, 116км, Кошелёв, пгт.Керамика +200 ₽
+							option.ordering__option Красная Глинка +300 ₽
+
+					.ordering__pay 
+						.ordering__title Способ оплаты *
+						.ordering__options.ordering__options_flex 
+							input.ordering__radio#radio_3(type="radio" name="group_2" checked)
+							label.ordering__caption(for="radio_3") Пластиковая карта Visa/Mastercard
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+						
+							input.ordering__radio#radio_4(type="radio" name="group_2")
+							label.ordering__caption(for="radio_4") Оплата при доставке
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.66602" y="1.59814" width="28" height="28" rx="14" stroke="#CFCFCF" stroke-width="2"/>
+									<rect x="8.41602" y="8.34766" width="15" height="15" rx="7.5" fill="#CFCFCF"/>
+								</svg>
+
+					.ordering__final 
+						.ordering__consent Нажимая на кнопку, вы даете согласие на обработку своих <a href="/">персональных данных</a>
+				
+						+button('Оплатить','button_submit','submit')

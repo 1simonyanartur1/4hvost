@@ -1,0 +1,26 @@
+- var img = '../img/';
+include main.pug
+
+doctype
+html
+	include blocks/head.pug
+		title
+	body
+		+header1()
+		//- include blocks/header.pug
+
+		main.page-container
+			+breadcrumbs('Оформление заказа','Заказ успешно оформлен ')
+			section.section
+				.section__inner.section__inner_success
+					+title('Ваш заказ № 34565 успешно оформлен!','title_center','h1','')
+					+title('Благодарим за покупку! :)','title_center title_subtitle','','','','','h3')
+					+title('Вы можете просмотреть историю заказов в личном кабинете, открыв <a href="/">Историю заказов</a>','title_center title_subtitle','','','','','h3')
+				
+					+button('На главную','','','/')
+
+
+
+		include blocks/footer.pug
+		
+		include blocks/scripts.pug

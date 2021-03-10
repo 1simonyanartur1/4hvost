@@ -1,0 +1,304 @@
+.ordering
+
+	&__inner
+		width: 100%
+
+		padding: 0 0 200px 0
+		margin: 0 auto
+		max-width: 1560px
+		+mq($max-width: 1650px)
+			padding: 0 15px 200px
+			max-width: 100%
+		+mq($max-width: 1200px)
+			padding: 0 15px
+			max-width: 100%
+		+mq($max-width: 1024px)
+
+		+mq($max-width: 575px)
+			padding: 0 10px
+
+	&__form
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 50px
+		padding: 50px 0 0 0
+
+		+mq($max-width: 1023px)
+			grid-template-columns: 1fr
+	&__box
+		display: flex
+		flex-flow: wrap
+		justify-content: space-between
+
+
+	&__delivery
+		width: 100%
+		display: flex
+
+		+mq($max-width: 767px)
+			flex-direction: column
+		.ordering__options
+			flex: 0 0 40%;
+			+mq($max-width: 767px)
+				flex: 0 0 100%
+				display: flex
+				justify-content: space-between
+
+		.ordering__caption
+			+mq($max-width: 767px)
+				width: calc(50% - 15px)
+			
+	&__pay
+		width: 100%
+		
+	&__final
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+		+mq($max-width: 767px)
+			flex-flow: wrap
+			justify-content: center
+			padding: 0 0 40px 0
+
+
+	&__caption
+		margin-bottom: 30px
+
+	&__options
+		
+		&_flex
+			display: flex
+			justify-content: space-between
+			.ordering__caption
+				width: calc(50% - 15px)
+
+
+	&__title
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 24px
+		color: $green
+		width: 100%
+		margin-bottom: 30px
+
+	&__input
+		background: #EFF3F9
+		border: 1px solid #EBEBEB
+		margin-top: 6px
+		height: 60px
+
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 22px
+		padding: 0 20px 0 30px
+		color: black
+		+mq($max-width: 767px)
+			
+			font-size: 16px
+			padding: 0 20px
+
+	&__textarea
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 22px
+		border: 1px solid #EBEBEB
+		color: black
+		width: 100%
+		padding: 20px 30px
+		height: 125px
+		+mq($max-width: 767px)
+			padding:  20px
+			font-size: 16px
+
+		&::placeholder
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 22px
+
+			color: #868686
+			+mq($max-width: 767px)
+				font-size: 16px
+
+	&__label
+		position: relative
+		display: flex
+		width: 100%
+		flex-direction: column
+
+		font-size: 18px
+		line-height: 22px
+		letter-spacing: 0.03em
+		color: #000000
+
+		width: calc(50% - 15px)
+		margin-bottom: 16px
+
+		+mq($max-width: 767px)
+			width: 100%
+			font-size: 16px
+
+		&_full
+			width: 100%
+
+		svg
+			position: absolute
+			height: 22px
+			width: 22px
+			top: 20px
+			left: 24px
+
+	&__consent
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 17px
+		text-align: center
+		max-width: 310px
+		padding: 20px 0 0 0
+		color: black
+
+		+mq($max-width: 767px)
+			margin-bottom: 20px
+
+		a
+			color: black
+			text-decoration: underline
+
+	&__radio
+		display: none
+
+	&__radio:checked+label
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		cursor: pointer
+		height: 30px
+		height: 24px
+		font-size: 16px
+		font-weight: 500
+		justify-content: flex-end
+
+	&__radio:checked+label svg
+		margin-right: 15px
+
+		+mq($max-width: 1023px)
+			flex: 0 0 23px
+
+		rect:first-child
+			stroke: $green
+
+		rect:last-child
+			fill: $green
+
+	&__radio+label
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		cursor: pointer
+		height: 30px
+		height: 24px
+		font-size: 16px
+		color: black
+		font-weight: 500
+		justify-content: flex-end
+
+	&__radio+label svg
+		margin-right: 15px
+		+mq($max-width: 1023px)
+			flex: 0 0 23px
+
+		rect:first-child
+			stroke: #CFCFCF
+
+		rect:last-child
+			fill: transparent
+
+	&__consent
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 17px
+		text-align: center
+		color: #000000
+		text-align: center
+		// display: flex
+		// align-items: center
+		text-align: center
+
+	&__select
+		background: #EFF3F9
+		border: 1px solid #EBEBEB
+		width: 100%
+		border-radius: unset
+		height: 60px
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+		&_delivery
+			display: none
+
+		
+		&_delivery
+			.current
+				font-size: 16px !important
+		&_office
+			.current
+				font-size: 16px !important
+				
+
+	&__option
+
+	.nice-select
+		padding-left: 30px
+		+mq($max-width: 767px)
+			padding-left: 20px
+
+	.nice-select:after
+		width: 20px
+		height: 20px
+		display: block
+		
+		border: none
+		background-image: url(../img/triangle.svg)
+		background-repeat: no-repeat
+		transform: rotate(0deg)
+
+	.nice-select .list
+		width: 100%
+		border-radius: unset
+
+	.nice-select.open,
+	.nice-select:focus
+		border-color: #EBEBEB
+
+	.nice-select .option
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		display: flex
+		align-items: center
+		padding: 0 20px
+		width: 100%
+		height: 60px
+		border: 1px solid #EBEBEB
+		line-height: normal
+		white-space: pre-wrap
+
+	.nice-select .current
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		color: #000000
+		
+		padding: 0
+		line-height: normal
+		white-space: pre-wrap
+		+mq($max-width: 767px)
+			
+			font-size: 16px

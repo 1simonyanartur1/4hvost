@@ -1,0 +1,220 @@
+.compare
+	width: 270px
+	padding: 10px 0 0 0
+	border: 1px solid #CFCFCF
+	display: grid !important
+	grid-template-columns: 1fr
+	grid-template-rows: 66px 215px 50px 50px 50px 50px 50px 130px 60px 60px 100px
+	cursor: pointer
+
+	margin-right: 20px
+	+mq($max-width: 767px)
+		margin: 0 10px
+	
+	&_empty
+		width: auto
+		cursor: default
+		border: none
+		margin: 0
+		.compare__option
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 17px
+			justify-content: flex-start
+			color: #000000
+	&__wrapper
+
+	&__inner
+		width: 100%
+		
+		position: relative
+
+		padding: 0 0 100px 0
+		margin: 0 auto
+		max-width: 1560px
+		+mq($max-width: 1650px)
+			padding: 0 15px 100px
+			max-width: 100%
+		+mq($max-width: 1200px)
+			padding: 0 15px 100px
+			max-width: 100%
+
+		+mq($max-width: 575px)
+			padding: 0 10px 50px
+
+	&__side
+		// display: none
+		padding: 35px 0 0 0
+		position: absolute;
+		+mq($max-width: 767px)
+			display: none
+	&__content
+		margin-left: 170px
+		+mq($max-width: 767px)
+			margin: 0
+
+	&__box
+
+		.slick-list
+			margin: 20px 0
+
+	&__nav
+		// margin: 0 10%
+		height: 15px
+		
+
+	&__scrollbar
+
+		background: #F1F1F1
+		border-radius: 17px
+
+		.slick-dots
+			display: flex
+			width: 100%
+			justify-content: space-between
+			background: #F1F1F1
+			border-radius: 17px
+
+		.slick-dots li
+			position: relative
+			display: inline-block
+			width: 100%
+			height: 15px
+			margin: 0
+			padding: 0
+			cursor: pointer
+			border-radius: 17px
+
+		.slick-dots li button
+			font-size: 0
+			line-height: 0
+			display: block
+			width: 100%
+			height: 15px
+			padding: 0
+			cursor: pointer
+			color: transparent
+			border: 0
+			outline: none
+			background: transparent
+
+		
+
+		.slick-dots li.slick-active
+			background-color: red
+			transition: all 0.5s
+
+	&__option
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0 10px
+
+	&__title
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+		color: #000000
+	&__image
+
+		img
+			height: 150px
+			width: 100px
+			object-fit: cover
+
+	&__price
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+		color: #000000
+		background-color: #EFF3F9
+	&__model
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+
+		color: #000000
+
+	&__brand
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+		background-color: #EFF3F9
+		color: #000000
+	&__instock
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+
+		color: #000000
+	&__rate
+		background-color: #EFF3F9
+	&__description
+		font-style: normal
+		font-weight: normal
+		font-size: 12px
+		line-height: 14px
+
+		color: #000000
+		padding-top: 24px
+		align-items: flex-start
+	&__weight
+		font-weight: 500
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		color: #000000
+		background-color: #EFF3F9
+	&__size
+		font-weight: 500
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		color: #000000
+	&__options
+	&__action
+		display: flex
+		flex-direction: row-reverse
+		justify-content: flex-end
+		align-items: center
+		cursor: pointer
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 18px
+		color: #000000
+
+		svg
+			height: 43px
+			width: 43px
+		&_add
+
+			&:hover
+				svg
+					path
+						fill: white
+					circle
+						fill: $green
+
+		&_delete
+
+			&:hover
+				svg
+					path
+						fill: $red
+
+		svg
+			margin-right: 5px
+
+		&_delete
+			margin-left: 10px

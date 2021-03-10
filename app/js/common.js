@@ -259,7 +259,45 @@
 
 		})
 
+
+
+
+		$('.ordering__select_address').niceSelect();
+		$('.ordering__select_office').niceSelect();
+		$('.ordering__select_delivery').niceSelect();
+
+
+		$('input[name="group_delivery').on('click',function(){
+			
+			var selectList = '.nice-select' + '.' + $(this).val()
 		
+			$(selectList).css('display','flex')
+			$('.ordering__select').not($(selectList)).not($('.ordering__select_address')).css('display','none')
+		})
+
+		
+
+		
+
+		$('.compare__box').slick({
+			arrows: false,
+			slidesToShow: 5,
+			infinite: false,
+			dots: true,
+			appendDots: '.compare__scrollbar',
+			variableWidth: true,
+			responsive:[{
+				breakpoint: 767,
+				settings:{
+					variableWidth: false,
+					slidesToShow: 1
+				}
+			}]
+		});
+
+
+
+
 
 
 
@@ -300,7 +338,7 @@
 			var goodsTotal = goodsQuantity * goodsPrice
 
 			$('.goods__total span').text(goodsTotal + '\u00A0₽')
-			
+
 		}
 
 	});

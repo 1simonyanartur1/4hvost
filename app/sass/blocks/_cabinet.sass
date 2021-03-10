@@ -1,0 +1,37 @@
+.cabinet
+    display: flex
+    flex-flow: wrap
+    padding: 60px 0 30px
+    +mq($max-width: 575px)
+        padding: 50px 0
+    &__box
+        width: 300px
+        +mq($max-width: 575px)
+            width: 100%
+            padding: 0 0 30px 0
+        &:not(:last-child)
+            margin-right: 90px
+            +mq($max-width: 575px)
+                margin-right: 0
+    &__title
+        font-style: normal
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+        color: $green
+        margin-bottom: 40px
+        +mq($max-width: 575px)
+            margin-bottom: 30px
+            font-size: 20px
+
+    &__link
+        font-style: normal
+        font-weight: normal
+        font-size: 17px
+        line-height: 20px
+        text-decoration-line: underline
+        color: #1D1D1D
+        margin-bottom: 30px
+        +mq($max-width: 575px)
+            margin-bottom: 20px
+            font-size: 15px
