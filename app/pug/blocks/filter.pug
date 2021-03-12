@@ -6,27 +6,25 @@ mixin filter(catalog, actions)
             .filter__box
                 .filter__title Бренд
                 .filter__group
-                    
-                        input.filter__radio#radio_1(type="radio" name="group_1" checked)
-                        label.filter__label(for="radio_1") Деревенские лакомства
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
-                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
-                            </svg>
-                    
-                        input.filter__radio#radio_2(type="radio" name="group_1")
-                        label.filter__label(for="radio_2") Хеппи Дог
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
-                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
-                            </svg>
-                    
-                        input.filter__radio#radio_3(type="radio" name="group_1")
-                        label.filter__label(for="radio_3") Хеппи Дог
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
-                                <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
-                            </svg>
+                        a(href="/").filter__brand.filter__brand_active Деревенские лакомства
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                    <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                                </svg>
+                        a(href="/").filter__brand
+                            input.filter__radio#radio_2(type="radio" name="group_1")
+                            label.filter__label(for="radio_2") Хеппи Дог
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                    <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                                </svg>
+                        a(href="/").filter__brand
+                            input.filter__radio#radio_3(type="radio" name="group_1")
+                            label.filter__label(for="radio_3") Хеппи Дог
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11.5" cy="11.5" r="11.5" fill="#E0E0E0"/>
+                                    <circle cx="11.5" cy="11.5" r="7.5" fill="#C0C0C0"/>
+                                </svg>
             
             .filter__box
                 .filter__title Цена
