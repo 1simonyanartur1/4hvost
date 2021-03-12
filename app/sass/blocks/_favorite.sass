@@ -11,7 +11,7 @@
 			padding: 0 15px 100px
 			max-width: 100%
 		+mq($max-width: 1024px)
-			
+
 		+mq($max-width: 575px)
 			padding: 0 10px 50px
 
@@ -93,6 +93,25 @@
 
 	&__count
 		margin: 0 15px
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		letter-spacing: 0.03em
+		color: #000000
+		width: 47px
+		text-align: center
+
+	input[type='number']
+		-moz-appearance: textfield
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
 
 	&__action
 		display: flex
