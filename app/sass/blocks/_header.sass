@@ -159,7 +159,35 @@
 				path
 					// stroke: $red
 					fill: $red
-	.user-link
+	.user-link_auth
+		cursor: pointer
+		position: relative
+		+flex(row, null, center, wrap)
+		margin: 0
+		color: $dark
+		letter-spacing: 0.03em
+		font-weight: normal
+		font-size: 14px
+		margin: 0 27px
+		+mq($max-width: 1200px)
+			margin: 0 15px
+		+mq($max-width: 575px)
+			margin: 0
+		
+		&:hover
+			color: $green
+			&>svg
+				circle,
+				path
+					stroke: $red
+		&>svg
+			circle,
+			path
+				+trs
+				stroke: $dark
+		&>span
+			margin: 0 0 0 8px
+	.user-link:not(.user-link_auth)
 		+flex(row, null, center, wrap)
 		margin: 0
 		color: $dark
@@ -184,6 +212,9 @@
 				stroke: $dark
 		span
 			margin: 0 0 0 8px
+
+
+
 	.basket-link
 		+flex(row, null, center, nowrap)
 		&:hover

@@ -1,1 +1,43 @@
+
 .lk-menu
+	position: absolute
+	top: 40px
+	left: 0
+	border: 1px solid #F0F0F0;
+	display: none
+	z-index: 10
+
+	+mq($max-width: 575px)
+		left: - 110px
+	&__item
+		height: 75px
+		background-color: #fff
+		display: flex
+		flex-direction: row-reverse
+		width: 245px
+		justify-content: flex-end
+		align-items: center
+
+		font-style: normal
+		font-weight: 300
+		font-size: 16px
+		
+		padding: 0 5px 0 16px
+
+		color: #000000
+		&:not(:last-child)
+			border: 1px solid #F0F0F0;
+
+		&:hover
+			font-style: normal
+			font-weight: bold
+			font-size: 16px
+			
+			color: #FFFFFF
+			background-color: $green
+
+		svg
+			height: 32px
+			width: 32px
+			flex: 0 0 32px
+			margin-right: 15px
