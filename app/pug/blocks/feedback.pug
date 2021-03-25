@@ -1,9 +1,9 @@
-mixin feedback(reviews,thanks,forgot,change,pass,personal,registration,reclamation,entry)
+mixin feedback(reviews,thanks,forgot,change,pass,personal,registration,reclamation,entry,search)
 	if reviews
 		.feedback
 			+title('Покупали данную продукцию?','','','','','form')
 			.feedback__subtitle Оставьте своё мнение
-			form(action="/").feedback__form
+			 
 				label.feedback__label.feedback__label_name
 					svg.stars__icon
 							use(xlink:href="/img/sprite_form.svg#user")
@@ -14,6 +14,17 @@ mixin feedback(reviews,thanks,forgot,change,pass,personal,registration,reclamati
 				+stars('','','','empty')
 				+button('Отправить','button_submit','submit')
 				.feedback__consent Я прочитал(а) и даю согласие на обработку своих персональных данных.
+
+	else if search 
+		.feedback.feedback_search
+			form(action="/").feedback__form.feedback__form_search
+				label.feedback__label
+					svg.stars__icon
+							use(xlink:href="/img/sprite_form.svg#search")
+					input(type="text" placeholder="Поиск" name="search").feedback__input
+
+				+button('Найти','button_submit','submit')  
+
 	else if thanks 
 		.feedback
 			+title('Сообщение отправлено','','','','','form')

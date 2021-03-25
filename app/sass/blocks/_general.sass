@@ -153,13 +153,29 @@ body
 
 			+mq($max-width: 575px)
 				padding: 0
-			p
+			p,a,li,span
 				font-style: normal
 				font-weight: normal
 				font-size: 16px
-				line-height: 215.5%
+				line-height: 1.77
+				margin-bottom: 30px
 
 				color: #000000
+			a
+				font-weight: bold
+				color: $green
+			li 
+				margin-bottom: 20px
+				position: relative
+				padding: 0 0 0 30px
+
+				&:after
+					content: '●'
+					position: absolute
+					top: 0
+					left: 6px
+
+
 
 	&__block
 		height: 500px

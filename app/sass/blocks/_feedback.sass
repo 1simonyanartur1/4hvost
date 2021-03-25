@@ -50,6 +50,8 @@
 		+mq($max-width: 575px)
 			padding: 20px 10px
 
+	&_search
+		max-width: unset
 	&__image
 		position: absolute
 		top: -60px
@@ -119,6 +121,22 @@
 			+mq($max-width: 767px)
 				grid-gap: 0
 				grid-template-columns: 1fr
+
+		&_search
+			max-width: unset
+			flex-direction: row
+			align-items: center
+			+mq($max-width: 767px)
+				flex-direction: column
+			.feedback__label
+				flex: 1
+			.feedback__input
+				margin: 0 20px 0 0
+				max-width: 100%
+				height: 60px
+				+mq($max-width: 767px)
+					margin: 0 0 20px 0
+				
 
 	&__fieldset
 		display: grid

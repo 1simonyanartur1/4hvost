@@ -5,6 +5,8 @@
 	position: relative
 	margin: 10px !important
 	height: unset
+	max-width: 550px
+	max-height: 670px
 	&.new
 		.new
 			display: flex
@@ -41,26 +43,7 @@
 		display: none
 	.new
 		margin: 0
-	.choose
-		margin-left: 5px
-		background: none
-		cursor: pointer
-		svg
-			width: 20px
-
-		&.active,
-		&:hover
-			svg
-				path
-					fill: $red
-
-		&_love
-			svg
-				path
-					+trs
-					fill: transparent
-					stroke: $red
-					stroke-width: 55
+	
 
 		&__box
 			margin: 0 0 0 auto
@@ -194,3 +177,39 @@
 	// 		padding: 0 5px
 	// 	&:hover
 	// 		color: $red
+
+.choose
+	margin-left: 5px
+	background: none
+	cursor: pointer
+	svg
+		width: 20px
+
+	&.active,
+	&:hover
+		svg
+			path
+				fill: $red
+
+	&_compare
+
+		&_add
+			svg
+				path
+					fill: $red
+
+	&_love
+		svg
+			path
+				+trs
+				fill: transparent
+				stroke: $red
+				stroke-width: 55
+
+		&_add
+			svg
+				path
+					+trs
+					fill: $red
+					stroke: $red
+					stroke-width: 55

@@ -39,4 +39,8 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 22" id="index">
     <path d="M0 3a3 3 0 116 0 3 3 0 01-6 0zm0 5a1 1 0 011-1h4a1 1 0 011 1v12.5a1 1 0 01-1 1H1a1 1 0 01-1-1V8zm8 12.5a1 1 0 001 1h3.5a1 1 0 001-1v-7.094a1 1 0 012 0V20.5a1 1 0 001 1H20a1 1 0 001-1v-7a6.5 6.5 0 00-13 0v7z" fill="#02A950"></path>
   </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21" id="search">
+    <circle cx="8.964" cy="8.619" r="6.913" stroke="#02A950" stroke-width="2.5"></circle>
+    <path d="M13.498 13.154l6.802 6.802" stroke="#02A950" stroke-width="2.5"></path>
+  </symbol>
 </svg>
