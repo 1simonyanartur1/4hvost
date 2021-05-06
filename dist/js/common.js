@@ -276,6 +276,17 @@
 		})
 
 		
+	
+
+		$('.user-link_auth').on('click', function(e){
+			e.preventDefault()
+			var lkMenu = $('.lk-menu')
+			if(lkMenu.hasClass('lk-menu_active')){
+				lkMenu.hide().removeClass('lk-menu_active')
+			}else{
+				lkMenu.show().addClass('lk-menu_active')
+			}
+		})
 
 		
 
